@@ -1,26 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Home from './views/Home';
+import AuthenticateComponent from './components/AuthenticateComponent';
+import Login from './components/user/Login';
+import Dashboard from './views/Dashboard';
+import Forum from './views/Forum';
+import Topic from './views/Topic';
+// import LoginView from './views/LoginView';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login" component={Login} />
+          <Route path="/" exact component={Home} />
+          <AuthenticateComponent>
+            <Route path="/forum" exact component={Dashboard} />
+            <Route path="/forum/beta" component={Forum} />
+            <Route path="/forum/beta/topic/1" component={Topic} />
+          </AuthenticateComponent>
+        </Switch>
+      </BrowserRouter>
     );
   }
 }

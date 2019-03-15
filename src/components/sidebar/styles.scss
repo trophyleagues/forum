@@ -1,0 +1,22 @@
+.ico {
+  background-image: url('../../assets/menu/generic.png');
+  background-size: cover;
+  width: 40%;
+}
+
+.ico:hover {
+  background-image: url('../../assets/menu/generic_hover.png');
+
+}
+
+.ico-active {
+  background-image: url('../../assets/menu/generic_active.png') !important;
+}
+
+.menu-text {
+  font-family: Myriad Pro, Dosis;
+  color: #c3d99e;
+  margin: 0px;
+  padding-bottom: 8px;
+  font-family: dosis;
+}
