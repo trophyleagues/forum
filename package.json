@@ -20,7 +20,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "concurrently \"npm run start\" \"npm --prefix ./client run start\""
+    "dev": "concurrently \"npm run start\" \"npm --prefix ./ run start\""
   },
   "eslintConfig": {
     "extends": "react-app"

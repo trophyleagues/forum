@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './styles.scss';
+import './SidebarContainer.scss';
 
 class SidebarContainer extends Component {
   render() {
@@ -9,9 +9,9 @@ class SidebarContainer extends Component {
         <ul className="list-unstyled components">
         <li className="active">
           <a href="/club" className="pb-0">
-            <img src={require("../../assets/menu/generic.png")} className="ico ico-active" />
+            <img src={require("../../assets/menu/generic.png")} className="ico ico-active" alt="generic"/>
           </a>
-          <a href="#clubSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
+          <a href="./#clubSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
             <p className="menu-text mb-1">Club</p>
           </a>
           <ul className="collapse list-unstyled" id="clubSubmenu">
@@ -31,9 +31,9 @@ class SidebarContainer extends Component {
         </li>
           <li>
               <a href="/players" className="pb-0">
-                <img src={require("../../assets/menu/generic.png")} className="ico" />
+                <img src={require("../../assets/menu/generic.png")} className="ico" alt="generic"/>
               </a>
-              <a href="#playersSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
+              <a href="./#playersSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
                   <p className="menu-text mb-1">Players</p>
               </a>
                   <ul className="collapse list-unstyled" id="playersSubmenu">
@@ -52,29 +52,32 @@ class SidebarContainer extends Component {
               </ul>
           </li>
           <li>
-              <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
-                  <img src={require("../../assets/menu/generic.png")} className="ico img-fix" /><p className="menu-text">Competitions</p>
+              <a href="./#pageSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
+                  <img src={require("../../assets/menu/generic.png")} className="ico img-fix" alt="generic"/>
+                  <p className="menu-text">Competitions</p>
               </a>
               <ul className="collapse list-unstyled" id="pageSubmenu">
                   <li>
-                      <a href="#"><p className="menu-text">League</p></a>
+                      <a href="./"><p className="menu-text">League</p></a>
                   </li>
                   <li>
-                      <a href="#"><p className="menu-text">Cup</p></a>
+                      <a href="./"><p className="menu-text">Cup</p></a>
                   </li>
                   <li>
-                      <a href="#"><p className="menu-text">Others</p></a>
+                      <a href="./"><p className="menu-text">Others</p></a>
                   </li>
               </ul>
           </li>
           <li>
-              <a href="#">
-              <img src={require("../../assets/menu/generic.png")} className="ico img-fix p-t-1" /><p className="menu-text">Market</p>
+              <a href="./">
+              <img src={require("../../assets/menu/generic.png")} className="ico img-fix p-t-1" alt="generic"/>
+              <p className="menu-text">Market</p>
               </a>
           </li>
           <li>
-              <a href="#">
-                  <img src={require("../../assets/menu/generic.png")} className="ico img-fix" /><p className="menu-text">Forum</p>
+              <a href="./">
+                  <img src={require("../../assets/menu/generic.png")} className="ico img-fix" alt="generic"/>
+                  <p className="menu-text">Forum</p>
               </a>
           </li>
 
@@ -85,13 +88,13 @@ class SidebarContainer extends Component {
               <p className="menu-text">FAQ</p>
           </li>
           <li>
-              <a href="#">
+              <a href="./">
             <i className="fas fa-book"></i>
             <p className="menu-text">Guide</p>
               </a>
           </li>
           <li>
-          <a href="#"><i className="fas fa-paper-plane"></i>
+          <a href="./"><i className="fas fa-paper-plane"></i>
             <p className="menu-text">Issues</p></a>
           </li>    
         </ul>

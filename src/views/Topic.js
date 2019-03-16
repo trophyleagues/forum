@@ -1,15 +1,15 @@
 import React from 'react';
-import Thread from '../components/thread/';
-import ForumHeader from '../components/forumheader/ForumHeader';
+import ForumThread from '../components/forumThread';
+import ForumNav from '../components/forumNav/ForumNav';
 import Header from '../components/header/Header';
 
 const Topic = () => {
     return(
       <div>
-      <Header section="Thread" />
+      <Header section="Topic" />
         <div className="container">
-          <ForumHeader />
-          <Thread></Thread>
+          <ForumNav />
+          <ForumThread />
         </div>
       </div>
     )

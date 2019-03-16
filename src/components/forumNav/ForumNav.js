@@ -1,15 +1,8 @@
-import React, { Component } from'react';
+import React from'react';
 import './header.css';
 import { NavLink } from 'react-router-dom';
 
-class navForum extends Component{
-
-  logout(e) {
-    localStorage.removeItem('access_token')
-    localStorage.removeItem('user_id')
-  }
-
-  render() {
+const ForumNav = ()  => {
     return (
       <header className="Header mt-2">
         <nav>
@@ -19,34 +12,33 @@ class navForum extends Component{
             </li>
             <li>
               <NavLink exact to="/forum" activeClassName="is-selected">
-                Novedades
+                Dashboard
               </NavLink>
             </li>
             <li>
               <NavLink to="/forum/beta" activeClassName="is-selected">
-                Beta
+                Subforum
               </NavLink>
             </li>
             <li>
-              <NavLink to="/forum/propuestas" activeClassName="is-selected">
-                  Propuestas
+              <NavLink to="/forum/topic/1" activeClassName="is-selected">
+                Topic
               </NavLink>
             </li>
             <li>
               <NavLink to="/forum/copa-argentina" activeClassName="is-selected">
-                  Denuncias
+                Response
               </NavLink>
             </li>
             <li>
-              <a onClick={this.logout()}>
-                  Logout
+              <a href="./">
+                Login / Logout
               </a>
             </li>
           </ul>
         </nav>
       </header>
     )
-  }
 }
 
-export default navForum;
+export default ForumNav;

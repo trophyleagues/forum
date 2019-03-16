@@ -8,7 +8,7 @@ class Details extends Component {
           <span className="badge badge-dark ml-2">{this.props.tags}</span>
         </div>
         <div className="col-xs-6 ml-auto p-2 yellow">
-          <p>
+          <span>
             <b className="mr-3 purple">
               {this.props.favs} 
               <img src={require("../../assets/icons/fav.png")} width="20px" className="m-1 mb-2" alt="favorite"/>
@@ -17,7 +17,7 @@ class Details extends Component {
             {this.props.opinions}  
             <img src={require("../../assets/icons/opinion.png")} width="20px" className="m-1 mb-2" alt="like" />
             </b>
-          </p>
+          </span>
         </div>
       </div>
     )

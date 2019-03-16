@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../components/button';
-import Post from '../thread/post';
+import UserProfile from '../topicElements/UserProfile'
+import Post from './post';
 
 const Thread = () => {
   return (
@@ -9,7 +9,7 @@ const Thread = () => {
       <Post></Post>
     </div>
     <div className="col-md-3">
-      <Button>Responder</Button>
+      <UserProfile />
     </div>
   </div>
     )

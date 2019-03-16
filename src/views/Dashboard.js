@@ -1,14 +1,14 @@
 import React from 'react';
-import ForumMain from '../components/forummain/ForumMain';
-import ForumHeader from '../components/forumheader/ForumHeader';
 import Header from '../components/header/Header';
+import ForumMain from '../components/forumMain/ForumMain';
+import ForumNav from '../components/forumNav/ForumNav';
 
 const Dashboard = () => {
     return(
       <div>
       <Header section="Forum" />
         <div className="container">
-          <ForumHeader />
+          <ForumNav />
           <ForumMain></ForumMain>
         </div>
       </div>

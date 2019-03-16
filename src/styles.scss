@@ -94,7 +94,12 @@ hr {
 
 table {
     white-space: nowrap;
+    margin: 0;
 }
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #c8e6db61;
+ }
 
 .row-primary {
     background: #89C6A2;
@@ -128,7 +133,7 @@ table {
 }
 
 .green {
-    color: #69C638;
+    color: #73a988;
 }
 
 .red {

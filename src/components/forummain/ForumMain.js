@@ -1,6 +1,6 @@
 import React from 'react';
-import Button from '../../components/button';
-import TopicContainer from '../topic/TopicContainer';
+import TopicContainer from './TopicContainer';
+import UserProfile from '../topicElements/UserProfile'
 
 const ForumMain = () => {
   return (
@@ -9,7 +9,8 @@ const ForumMain = () => {
       <TopicContainer></TopicContainer>
     </div>
     <div className="col-md-3">
-      <Button>Create new thread</Button>
+      <UserProfile>
+      </UserProfile>
     </div>
   </div>
     )

@@ -4,7 +4,7 @@ import Home from './views/Home';
 import AuthenticateComponent from './components/AuthenticateComponent';
 import Login from './components/user/Login';
 import Dashboard from './views/Dashboard';
-import Forum from './views/Forum';
+import Subforum from './views/Subforum';
 import Topic from './views/Topic';
 // import LoginView from './views/LoginView';
 
@@ -17,8 +17,8 @@ class App extends Component {
           <Route path="/" exact component={Home} />
           <AuthenticateComponent>
             <Route path="/forum" exact component={Dashboard} />
-            <Route path="/forum/beta" component={Forum} />
-            <Route path="/forum/beta/topic/1" component={Topic} />
+            <Route path="/forum/beta" component={Subforum} />
+            <Route path="/forum/topic/1" component={Topic} />
           </AuthenticateComponent>
         </Switch>
       </BrowserRouter>
