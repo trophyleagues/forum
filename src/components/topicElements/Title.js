@@ -3,9 +3,9 @@ import React from 'react';
 class Title extends React.Component {
   render(){
     return(
-        <span className="mb-0 ">
+        <span>
           <a href="/forum/beta/topic/1">
-            <b className="black">{this.props.title}</b>
+            <b className="ml-1">{this.props.title}</b>
           </a>
         </span>
     )

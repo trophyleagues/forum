@@ -11,6 +11,7 @@ import Topic from './views/Topic';
 class App extends Component {
   render() {
     return (
+      <>
       <BrowserRouter>
         <Switch>
           <Route path="/login" component={Login} />
@@ -22,6 +23,7 @@ class App extends Component {
           </AuthenticateComponent>
         </Switch>
       </BrowserRouter>
+      </>
     );
   }
 }

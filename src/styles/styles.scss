@@ -1,26 +1,18 @@
 /*
     DEMO STYLE
 */
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import './vars.scss';
+@font-face { font-family: chunkfive; src: url('../assets/fonts/Chunkfive.otf'); }
+@font-face { font-family: dosis; src: url('../assets/fonts/Dosis-Light.otf'); }
+@font-face { font-family: dosis-extrabold; src: url('../assets/fonts/Dosis-ExtraBold.otf'); }
+@font-face { font-family: sspro; src: url('../assets/fonts/SourceSansPro-Regular.otf'); }
 
-@font-face { font-family: chunkfive; src: url('./assets/fonts/Chunkfive.otf'); }
-@font-face { font-family: dosis; src: url('./assets/fonts/Dosis-Light.otf'); }
-@font-face { font-family: dosis-extrabold; src: url('./assets/fonts/Dosis-ExtraBold.otf'); }
-
-$font-dosis: 'dosis', sans-serif;
-$font-chunkfive: 'chunkfive', Helvetica;
-$primary-color: #EBF3F5;
-$bg-color: #EBF3F5; // #45738b;
-$text-primary: #c3d99e; // #ffffff;
-
-// Colors
-$red: #CE3A17;
-$black: #444444;
 
 body {
     font-family: $font-dosis;
     background: $bg-color; // Dark mode: #243144
-    background-image: url('./assets/img/bottom.png');
+    background-image: url('../assets/bg.png');
     background-position: right bottom;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -62,7 +54,7 @@ h2 {
 }
 
 h5 {
-  color: $red;
+  color: $light-green;
   font-family: chunkfive !important;
   font-size: 1.4rem;
   font-weight: lighter;
@@ -88,6 +80,9 @@ hr {
   margin-top: 5px;
 }
 
+.sidebar-container {
+    width: 15%;
+}
 /* ---------------------------------------------------
     Tables
 ----------------------------------------------------- */
@@ -117,7 +112,7 @@ table {
     color: $black;
 }
 .green-main {
-    color: #89C6A2;
+    color: $light-green;
 }
 
 .green-secondary {
@@ -188,211 +183,47 @@ table {
     Header
 ----------------------------------------------------- */
 .header {
-    background: url("./assets/img/header.png") !important;
-    height: 160px;
-    background-attachment: fixed !important;
-    background-repeat: no-repeat !important;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center center;
-    background-size: 100% !important;
-    margin-top: -50px;
+    background: $deep-blue;
+    height: 50px;
+    background-size: 100%;
+    border-top: 5px solid $light-green;
+    z-index: 2;
 }
 
-.shield {
-    position: absolute;
-    left:0;
-    right:0;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top: -30px;
-    width: 100px;
-    z-index: 5;
-}
-.navbar {
-    padding: 15px 10px;
-    background: #fff;
-    border: none;
-    border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
-}
-
-.navbar-btn {
-    box-shadow: none;
-    outline: none !important;
-    border: none;
-}
-
-.navbar-brand {
-    font-size: 80px;
-    font-family: chunkfive !important;
-    color: rgba(233, 242, 218, 0.363) !important;
-    padding-top: 80px;
-    padding-left: 150px;
-}
-
-
-.menu {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-}
-.line {
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
-}
-
-i,
-span {
-    display: inline-block;
-}
-
-/* ---------------------------------------------------
-    SIDEBAR STYLE
------------------------------------------------------ */
-
-.wrapper {
-    display: flex;
-    align-items: stretch;
-}
-
-#sidebar {
-    min-width: 250px;
-    max-width: 250px;
-    background: #303D54;
-    color: #B7D5A6;
-    transition: all 0.3s;
+.logo-container {
+    background: $dark-blue;
+    width: 15%;
     height: 100%;
-    margin-top: -15px;
-}
-
-#sidebar.active {
-    min-width: 120px;
-    max-width: 120px;
+    color: $light-gray;
     text-align: center;
-    height: 100%;
+    font-size: 1.5rem;
+    padding: 5px 20px;
 }
 
-#sidebar.active .sidebar-header h3,
-#sidebar.active .CTAs {
-    display: none;
+.top-menu {
+    width: 80%;
+    ul {
+        position: relative;
+        display: flex;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+    li {
+        display: inline !important;
+        color: $light-gray;
+        text-align: center;
+        font-size: 1.0rem;
+        padding: 0 20px;
+    }
+    li.is-selected {
+        border-bottom: solid 3px $light-green;
+      }
+      
+    li:hover {
+        border-bottom: solid 3px $light-gray;
+    }
+      
 }
-
-#sidebar.active .sidebar-header strong {
-    display: block;
-}
-
-#sidebar ul li a {
-    text-align: left;
-}
-
-#sidebar.active ul li a {
-    padding: 5px 10px;
-    text-align: center;
-    font-size: 0.85em;
-}
-
-#sidebar.active ul li a i {
-    margin-right: 0;
-    display: block;
-    font-size: 1.8em;
-    margin-bottom: 5px;
-}
-
-#sidebar.active ul ul a {
-    padding: 10px !important;
-}
-
-#sidebar.active .dropdown-toggle::after {
-    top: auto;
-    bottom: 10px;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
-}
-
-#sidebar .sidebar-header {
-    padding: 20px;
-    background: #253144;
-}
-
-#sidebar .sidebar-header strong {
-    display: none;
-    font-size: 1.8em;
-}
-
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-// #sidebar ul li a:hover {
-//     color: #1E2A3A;
-//     background: #fff;
-// }
-
-#sidebar ul li a i {
-    margin-right: 10px;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #253144;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #243145;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
-
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
@@ -407,6 +238,37 @@ a.article:hover {
     padding: 20px;
 }
 
+.body-container {
+    margin: 1% 0 0 1%;
+    width: 80%;
+    h1 {
+        margin-bottom: 0;
+        padding-left: 15px;
+        line-height: 2.3rem;
+        color: $white;
+    }
+    .body {
+        background-color: $body-bg;
+        margin: 0;
+        padding-top: 15px;
+        height: 90%;
+    }
+}
+
+.topic-container {
+    h3 {
+        margin-left: 0;
+    }
+    .card {
+        background: $body-bg; /* Old browsers */
+        border: solid 1px #fff;
+        border-radius: 0;
+        // background: linear-gradient(to right, rgba(115,170,138,1) 0%, rgba(149,189,142,1) 51%, rgba(115,170,138,1) 100%);
+        .card-body {
+            color: #fff;
+        }
+    }    
+}
 /* ---------------------------------------------------
     General Styles
 ----------------------------------------------------- */
@@ -534,7 +396,7 @@ a.article:hover {
     display: none;
   }
 .r-checker {
-    background-image: url('./assets/img/r-checkboxes.png');
+    background-image: url('../assets/img/r-checkboxes.png');
     background-position: left center;
     background-size: auto 100%;
     width: 26px;
@@ -549,7 +411,7 @@ a.article:hover {
     display: none;
   }
 .l-checker {
-    background-image: url('./assets/img/l-checkboxes.png');
+    background-image: url('../assets/img/l-checkboxes.png');
     background-position: left center;
     background-size: auto 100%;
     width: 26px;
@@ -565,7 +427,7 @@ a.article:hover {
     display: none;
   }
 .m-checker {
-    background-image: url('./assets/img/m-checkboxes.png');
+    background-image: url('../assets/img/m-checkboxes.png');
     background-position: left center;
     background-size: auto 100%;
     width: 26px;
@@ -596,11 +458,6 @@ transition: transform 300ms ease-in-out;
 
 .login-box {
   max-width: 600px;
-}
-.card {
-    background: rgba(255, 255, 255, 0.6); /* Old browsers */
-    // background: linear-gradient(to right, rgba(115,170,138,1) 0%, rgba(149,189,142,1) 51%, rgba(115,170,138,1) 100%);
-
 }
 
 /* ---------------------------------------------------

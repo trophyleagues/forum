@@ -1,108 +1,61 @@
 import React, {Component} from 'react';
-import './SidebarContainer.scss';
+import {Link} from 'react-router-dom';
+import '../../styles/sidebar.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCog } from '@fortawesome/free-solid-svg-icons'
+import menu from '../../assets/menu/generic.png';
 
 class SidebarContainer extends Component {
   render() {
     return(
-    <div>
+    <>
     <nav id="sidebar" className="active">
-        <ul className="list-unstyled components">
-        <li className="active">
-          <a href="/club" className="pb-0">
-            <img src={require("../../assets/menu/generic.png")} className="ico ico-active" alt="generic"/>
-          </a>
-          <a href="./#clubSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
-            <p className="menu-text mb-1">Club</p>
-          </a>
-          <ul className="collapse list-unstyled" id="clubSubmenu">
-            <li>
-              <a href="/club"><p className="menu-text">Club</p></a>
-            </li>
-            <li>
-              <a href="/office"><p className="menu-text">Office</p></a>
-            </li>
-            <li>
-              <a href="/economy"><p className="menu-text">Economy</p></a>
-            </li>
-            <li>
-              <a href="/infraestructure"><p className="menu-text">Infraestructure</p></a>
-            </li>
-          </ul>
+      <ul className="list-unstyled pt-2">
+        <li clasName="row d-block">
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Mi Club</Link></div>
         </li>
-          <li>
-              <a href="/players" className="pb-0">
-                <img src={require("../../assets/menu/generic.png")} className="ico" alt="generic"/>
-              </a>
-              <a href="./#playersSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
-                  <p className="menu-text mb-1">Players</p>
-              </a>
-                  <ul className="collapse list-unstyled" id="playersSubmenu">
-                      <li>
-                          <a href="/players"><p className="menu-text">Players</p></a>
-                      </li>
-                      <li>
-                          <a href="/training"><p className="menu-text">Training</p></a>
-                      </li>
-                      <li>
-                          <a href="/market"><p className="menu-text">Market</p></a>
-                      </li>
-                      <li>
-                          <a href="/youngs"><p className="menu-text">Youngs</p></a>
-                      </li>
-              </ul>
-          </li>
-          <li>
-              <a href="./#pageSubmenu" data-toggle="collapse" aria-expanded="false" className="dropdown-toggle">
-                  <img src={require("../../assets/menu/generic.png")} className="ico img-fix" alt="generic"/>
-                  <p className="menu-text">Competitions</p>
-              </a>
-              <ul className="collapse list-unstyled" id="pageSubmenu">
-                  <li>
-                      <a href="./"><p className="menu-text">League</p></a>
-                  </li>
-                  <li>
-                      <a href="./"><p className="menu-text">Cup</p></a>
-                  </li>
-                  <li>
-                      <a href="./"><p className="menu-text">Others</p></a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-              <a href="./">
-              <img src={require("../../assets/menu/generic.png")} className="ico img-fix p-t-1" alt="generic"/>
-              <p className="menu-text">Market</p>
-              </a>
-          </li>
-          <li>
-              <a href="./">
-                  <img src={require("../../assets/menu/generic.png")} className="ico img-fix" alt="generic"/>
-                  <p className="menu-text">Forum</p>
-              </a>
-          </li>
-
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Liga III</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Copa Argentina</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Mundial</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Entrenamiento</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Juveniles</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Instalaciones</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Economía</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Marketing</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Foros</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Anuncios</Link></div>
+        </li>
+        <li>
+          <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Ayuda</Link></div>
+        </li>
       </ul>
-      <ul className="list-unstyled">
-          <li>
-              <i className="fas fa-question"></i>
-              <p className="menu-text">FAQ</p>
-          </li>
-          <li>
-              <a href="./">
-            <i className="fas fa-book"></i>
-            <p className="menu-text">Guide</p>
-              </a>
-          </li>
-          <li>
-          <a href="./"><i className="fas fa-paper-plane"></i>
-            <p className="menu-text">Issues</p></a>
-          </li>    
-        </ul>
-        <button type="button" id="sidebarCollapse" className="btn btn-info">
-          <span>Full +</span>
-        </button>
-      </nav>
+      <div className="sidebar-bottom d-flex justify-content-between align-items-center">
+        <img src="https://www.fulwoodsportsclub.co.uk/img/header/fscshield.png" className="user-avatar" /> 
+        <span>Wyge Machine</span>
+        <FontAwesomeIcon icon={faCog} />
       </div>
+      </nav>
+      
+      </>
     )
   }
 }

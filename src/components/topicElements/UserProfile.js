@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Button from '../topicElements/Button';
-import './UserProfile.scss';
+import '../../styles/UserProfile.scss';
 
 class UserProfile extends Component {
   render(){
