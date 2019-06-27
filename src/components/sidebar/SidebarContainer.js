@@ -49,7 +49,7 @@ class SidebarContainer extends Component {
         </li>
       </ul>
       <div className="sidebar-bottom d-flex justify-content-between align-items-center">
-        <img src="https://www.fulwoodsportsclub.co.uk/img/header/fscshield.png" className="user-avatar" /> 
+        <img src="https://www.fulwoodsportsclub.co.uk/img/header/fscshield.png" alt="Wyge Machine Shield" className="user-avatar" />
         <span>Wyge Machine</span>
         <FontAwesomeIcon icon={faCog} />
       </div>
