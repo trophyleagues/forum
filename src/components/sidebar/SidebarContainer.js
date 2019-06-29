@@ -11,7 +11,7 @@ class SidebarContainer extends Component {
     <>
     <nav id="sidebar" className="active">
       <ul className="list-unstyled pt-2">
-        <li clasName="row d-block">
+        <li className="row d-block">
           <div><img src={menu} alt="menu" className="menu-icon" /><Link to="/club">Mi Club</Link></div>
         </li>
         <li>

@@ -6,18 +6,18 @@ class UserProfile extends Component {
   render(){
     return(
       <div>
-      <div class="card h-100">
-        <div class="card-body">
-            <div class="myback-img">
+      <div className="card h-100">
+        <div className="card-body">
+            <div className="myback-img">
               <img src={require("../../assets/player.jpeg")} alt="player"/>
             </div>
-            <div class="myoverlay"></div>
-            <div class="profile-img">
-                <div class="borders avatar-profile">
+            <div className="myoverlay"></div>
+            <div className="profile-img">
+                <div className="borders avatar-profile">
                   <img src={require("../../assets/player.jpeg")} alt="player"/>
                 </div>
             </div>
-            <div class="profile-title">
+            <div className="profile-title">
                 <a href="./">
                     <h5>German</h5>
                     <h3>50 posts</h3>

@@ -11,7 +11,7 @@ class Pinned extends Component {
           <h5>Pinned topics</h5>
         </div>
         <div className="card-body p-0">
-        <table class="table table-striped mb-0">
+        <table className="table table-striped mb-0">
             <tbody>
               <tr>
                 <th scope="row">-</th>
@@ -40,7 +40,7 @@ class Pinned extends Component {
         <h5 className="green">Latest posts in Subforum</h5>
       </div>
       <div className="card-body p-0">
-        <table class="table table-striped mb-0">
+        <table className="table table-striped mb-0">
             <tbody>
               <tr>
                 <th scope="row">-</th>

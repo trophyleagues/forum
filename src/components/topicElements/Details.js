@@ -15,7 +15,7 @@ class Details extends Component {
             </b>
             <b className="mr-5">
             {this.props.opinions}  
-            <i class="fas fa-comments white"></i>
+            <i className="fas fa-comments white"></i>
             <img src={require("../../assets/icons/opinion.png")} width="20px" className="m-1 mb-2" alt="like" />
             </b>
           </span>

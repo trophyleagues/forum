@@ -48,15 +48,15 @@ class Login extends Component {
               <label htmlFor="password">Password: </label>
               <input type="password" name="password" onChange={e => this.change(e)} value={this.state.password} className="form-control" />
             </div>
-            <div class="d-flex flex-row-reverse">
-            <button type="submit" class="btn btn-gradient d-flex">Submit</button>
+            <div className="d-flex flex-row-reverse">
+            <button type="submit" className="btn btn-gradient d-flex">Submit</button>
             </div>
           </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center">
+    <div className="text-center">
       <small><a href="/register"><span className="red">Register</span> if you don't have account yet</a></small>
     </div>
     </div>

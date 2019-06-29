@@ -40,17 +40,17 @@ const Post = () => {
                 <div id="user-description" className="col-md-3 ">
                   <div className="well">
                       <div className="dropdown">
-                      <a href="#" className="dropdown-toggle" data-toggle="dropdown">
+                      <a href="/" className="dropdown-toggle" data-toggle="dropdown">
                       <i className="fa fa-cricle"></i>Mache<span className="caret"></span></a>
                       <ul className="dropdown-menu" role="menu">
-                        <li><a href="#"><i className="fa fa-user"></i>See profile</a></li>
-                        <li><a href="#"><i className="fa fa-envelope"></i> Send PM</a></li>
-                        <li><a href="#"><i className="fa fa-code"></i>View all Articles</a></li>
-                        <li><a href="#"><i className="fa fa-th-list"></i>View all Posts</a></li>
+                        <li><a href="/"><i className="fa fa-user"></i>See profile</a></li>
+                        <li><a href="/"><i className="fa fa-envelope"></i> Send PM</a></li>
+                        <li><a href="/"><i className="fa fa-code"></i>View all Articles</a></li>
+                        <li><a href="/"><i className="fa fa-th-list"></i>View all Posts</a></li>
                         <li className="divider"></li>
-                        <li><a href="#"><i className="fa fa-plus"></i>Add to contact List</a></li>
+                        <li><a href="/"><i className="fa fa-plus"></i>Add to contact List</a></li>
                         <li className="divider"></li>
-                        <li><a href="#"><i className="fa fa-cogs"></i>Manage User (for adminstrator)</a></li>
+                        <li><a href="/"><i className="fa fa-cogs"></i>Manage User (for adminstrator)</a></li>
                       </ul>
                       </div>
                       <div>
@@ -78,7 +78,7 @@ const Post = () => {
   <div className="topic-footer">
     <div className="row pt-2">
       <div className="col-md-3 pl-4">
-        <i className="fa fa-thumbs-up "></i><a href="#"> Thanks </a>| <i className="fa fa-warning "></i><a href="#"> Report </a>
+        <i className="fa fa-thumbs-up "></i><a href="/"> Thanks </a>| <i className="fa fa-warning "></i><a href="/"> Report </a>
       </div>
       <div id="thanks" className="col-md-5">
         
@@ -88,9 +88,9 @@ const Post = () => {
           <i className="fa fa-quote-right fa-stack-1x"></i>
           <i className="fa fa-comment-o fa-lg fa-stack-1x"></i>
         </span>
-        <a href="#"> Reply With Quote </a> |
-        <i className="fa fa-mail-reply "></i><a href="#"> Reply </a> |
-        <i className="fa fa-edit "></i><a href="#"> Edit Post </a>
+        <a href="/"> Reply With Quote </a> |
+        <i className="fa fa-mail-reply "></i><a href="/"> Reply </a> |
+        <i className="fa fa-edit "></i><a href="/"> Edit Post </a>
       </div>
     </div>
   </div>
