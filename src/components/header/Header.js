@@ -6,7 +6,7 @@ class Header extends React.Component {
     return(
     <>
     <div className="header row">
-    <div className="logo-container">Trophy<span className="green-main">Leagues</span></div>
+    <div className="logo-container">Trophy<span className="text-main">Leagues</span></div>
     <header className="top-menu">
       <nav>
         <ul>

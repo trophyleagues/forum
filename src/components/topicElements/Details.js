@@ -1,28 +1,27 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faComments } from '@fortawesome/free-solid-svg-icons'
 
-class Details extends Component {
-  render(){
+const Details = (props) => {
     return(
       <div className="row">
         <div className="col-xs-6 p-2">  
-          <span className="badge badge-dark ml-3">{this.props.tags}</span>
+          <span className="badge badge-dark ml-3">{props.tags}</span>
         </div>
-        <div className="col-xs-6 ml-auto p-2 yellow">
+        <div className="col-xs-6 ml-auto p-2">
           <span>
             <b className="mr-3">
-              {this.props.favs} 
+              {props.favs} 
               <img src={require("../../assets/icons/fav.png")} width="20px" className="m-1 mb-2" alt="favorite"/>
             </b>
             <b className="mr-5">
-            {this.props.opinions}  
-            <i className="fas fa-comments white"></i>
-            <img src={require("../../assets/icons/opinion.png")} width="20px" className="m-1 mb-2" alt="like" />
+            {props.opinions}  
+            <FontAwesomeIcon icon={faComments} className="yellow"/>
             </b>
           </span>
         </div>
       </div>
     )
-  }
 }
 
 export default Details;

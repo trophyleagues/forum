@@ -34,9 +34,9 @@ class Login extends Component {
   render(){
     return (
     <div>
-    <div className="col-md-12 d-flex justify-content-center mt-5">
+    <div className="col-md-12 d-flex justify-content-center p-5">
       <div className="col-md-12 login-box">
-        <div className="card">
+        <div className="card p-5">
           <div className="card-body">
           <form onSubmit={e => this.submit(e)}>
             <div className="form-group">
@@ -44,19 +44,19 @@ class Login extends Component {
               <input type="text" name="email" onChange={e => this.change(e)} value={this.state.email} className="form-control" />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password: </label>
+              <label htmlFor="password">Contraseña: </label>
               <input type="password" name="password" onChange={e => this.change(e)} value={this.state.password} className="form-control" />
             </div>
             <div className="d-flex flex-row-reverse">
-            <button type="submit" className="btn btn-gradient d-flex">Submit</button>
+            <button type="submit" className="btn btn-gradient d-flex">Enviar</button>
+            </div>
+            <div className="text-center">
+              <small><a href="/register"><span className="text-main">Registrate</span> si aún no tienes una cuenta</a></small>
             </div>
           </form>
           </div>
         </div>
       </div>
-    </div>
-    <div className="text-center">
-      <small><a href="/register"><span className="red">Register</span> if you don't have account yet</a></small>
     </div>
     </div>
     )

@@ -13,9 +13,9 @@ body {
     font-family: $font-dosis;
     background: $bg-color; // Dark mode: #243144
     background-image: url('../assets/bg.png');
-    background-position: right bottom;
+    background-position: left top;
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
 }
 
@@ -24,7 +24,7 @@ p {
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color:  $black !important; // #303D54;
+    color: $black !important; // #303D54;
 }
 
 b {
@@ -54,7 +54,7 @@ h2 {
 }
 
 h5 {
-  color: $light-green;
+  color: $primary-color;
   font-family: chunkfive !important;
   font-size: 1.4rem;
   font-weight: lighter;
@@ -69,8 +69,8 @@ hr {
 }
 
 .btn.btn-primary {
-  background-image: linear-gradient(to right, #89C6A2, #D0E5B3);
-  border-color: #D0E5B3;
+  background-image: linear-gradient(to right, $dark-blue, $deep-blue);
+  border-color: $dark-blue;
   color: #ffffff;
   font-family: chunkfive;
   font-size: 17px;
@@ -110,6 +110,9 @@ table {
 
 .black {
     color: $black;
+}
+.text-main {
+    color: $primary-color
 }
 .green-main {
     color: $light-green;
@@ -174,9 +177,10 @@ table {
 ----------------------------------------------------- */
 
 .btn-gradient {
+    border-color: $dark-blue;
     color: #f2f7f7;
     border: 2px #9ac091;
-    background: linear-gradient(to right, rgba(115,170,138,1) 0%, rgba(149,189,142,1) 51%, rgba(115,170,138,1) 100%);
+    background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
   }
     
 /* ---------------------------------------------------
@@ -186,7 +190,7 @@ table {
     background: $deep-blue;
     height: 50px;
     background-size: 100%;
-    border-top: 5px solid $light-green;
+    border-top: 5px solid $primary-color;
     z-index: 2;
 }
 
@@ -216,7 +220,7 @@ table {
         padding: 0 20px;
     }
     li.is-selected {
-        border-bottom: solid 3px $light-green;
+        border-bottom: solid 3px $primary-color;
       }
       
     li:hover {
@@ -277,6 +281,16 @@ table {
     height: 20px;
     margin: 10px 0;
     width: 25px;
+}
+
+/* ---------------------------------------------------
+    Login screen
+----------------------------------------------------- */
+.login-box {
+    .card {
+        background: $bg-color !important;
+        color: $text-primary;
+    }
 }
 
 /* ---------------------------------------------------

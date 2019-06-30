@@ -10,7 +10,7 @@ const Announces = () => {
       </div>
       <div className="card-body p-2">
         <Title title="Anunciamos que el 12/12/2222 se larga la Beta!!!"></Title>
-        <Details tags="Anounces" date="Hoy" favs="999" opinions="132"></Details>
+        <Details tags="Anounces" date="Hoy" favs="999" opinions="132 &nbsp;"></Details>
       </div>
     </div>
     )
