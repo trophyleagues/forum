@@ -14,10 +14,13 @@ export function forumIsLoading(state = false, action) {
           return state;
   }
 }
-export function forum(state = [], action) {
+export function forum(state = {announces: [], subforums: []}, action) {
   switch (action.type) {
-      case 'PLAYERS_FETCH_DATA_SUCCESS':
-          return action.forum;
+      case 'FORUM_FETCH_DATA_SUCCESS':
+          return {
+            announces: [action.payload.announces],
+            subforums: [action.payload.subforums]
+          };
       default:
           return state;
   }

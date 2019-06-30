@@ -3,11 +3,11 @@ import {connect} from 'react-redux';
 import TopicContainer from './TopicContainer';
 import UserProfile from '../topicElements/UserProfile'
 import {fetchForumData} from '../../store/actions/forumActions';
+import {url} from '../../config/config'
 
 class ForumMain extends React.Component {
   componentDidMount() {
-    console.log("Ok polilla")
-    this.props.forumData()
+    this.props.forumData(url)
   }
 
   render() {
@@ -27,7 +27,7 @@ class ForumMain extends React.Component {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-  forumData: () => dispatch(fetchForumData())
+  forumData: (url) => dispatch(fetchForumData(url))
 }
 }
 

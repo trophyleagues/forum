@@ -14,26 +14,34 @@ export function forumIsLoading(bool) {
   }
 }
 
-export function forumFetchDataSuccess(forum) {
+export function forumFetchData(forum) {
   return {
       type: 'FORUM_FETCH_DATA_SUCCESS',
-      forum
+      payload: forum
   }
 }
+
 
 // Async fetch passing dispatch to 'thunked' function
 // temp url (get from consts later:)
 export function fetchForumData(url) {
+  console.log(url)
   return (dispatch) => {
       dispatch(forumIsLoading(true));
       let headers = {'Access-Control-Allow-Origin': '*',
-                    'Content-Type': 'json',
+                    'Content-Type': 'application/x-www-form-urlencoded',
                     'Accept': '*/*' }
-      axios.get("http://api-forum.trophyleagues.com/api/v1/forums", {}, headers)
-          .then((res) => {
-            console.log(res)
+      axios.get(url, {}, headers)
+          .then((data) => {
+            console.log(data)
+            let announces = data.filter((subforum) => {
+              return subforum.is_announce
+            })
+            let subforums = data.filter((subforum) => {
+              return !subforum.is_announce
+            })
             dispatch(forumIsLoading(false))
-            dispatch(forumFetchDataSuccess(res))
+            dispatch(forumFetchData(subforums, announces))
           })
           .catch((err)=> {
             console.log(err)
