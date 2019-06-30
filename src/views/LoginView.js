@@ -4,12 +4,11 @@ import Login from '../components/user/Login'
 
 const LoginView = () => {
     return(
-      <div>
-      <Header section="Forum" />
+      <>
         <div className="container">
           <Login />
         </div>
-      </div>
+      </>
     )
 }
 

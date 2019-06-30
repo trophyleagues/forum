@@ -5,13 +5,12 @@ import Header from '../components/header/Header';
 
 const Topic = () => {
     return(
-      <div>
-      <Header section="Topic" />
+      <>
         <div className="container">
           <ForumNav />
           <ForumThread />
         </div>
-      </div>
+      </>
     )
 }
 

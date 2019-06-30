@@ -34,7 +34,6 @@ class Login extends Component {
   render(){
     return (
     <div>
-    <Header />
     <div className="col-md-12 d-flex justify-content-center mt-5">
       <div className="col-md-12 login-box">
         <div className="card">

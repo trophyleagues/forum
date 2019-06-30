@@ -4,11 +4,9 @@ import SidebarContainer from '../components/sidebar/SidebarContainer';
 import Header from '../components/header/Header';
 
 
-class Home extends React.Component {
-  render(){
+const Home = () =>  {
     return(
       <>
-      <Header section="Forum" />
       <div className="row">
         <div className="sidebar-container">
           <SidebarContainer></SidebarContainer>
@@ -23,6 +21,5 @@ class Home extends React.Component {
       </>
     )
   }
-}
 
 export default Home;
