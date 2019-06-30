@@ -6,7 +6,7 @@ class SubforumsPreview extends Component {
   render(){
     let {subforums} = this.props
     return(
-      <div className="card mt-2">
+      <div className="card mt-2 p-2">
       <div className="card-header pb-0">
         <h5 className="green">Forums</h5>
       </div>

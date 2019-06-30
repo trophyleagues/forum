@@ -21,6 +21,14 @@ export function forum(state = {announces: [], subforums: []}, action) {
             announces: [action.payload.announces],
             subforums: [action.payload.subforums]
           };
+      case 'POSTS_FETCH_DATA_SUCCESS':
+          return {
+            currentSubforum: action.payload
+          }
+      case 'RESPONSES_FETCH_DATA_SUCCES':
+          return {
+            responses: action.payload
+          }
       default:
           return state;
   }
