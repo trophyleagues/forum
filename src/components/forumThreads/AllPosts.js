@@ -2,13 +2,12 @@ import React, {Component} from 'react';
 import Title from '../topicElements/Title';
 import Author from '../topicElements/Author';
 
-class Pinned extends Component {
-  render(){
+const Pinned = () => {
     return(
-      <div>
-        <div className="card mt-2">
+      <>
+      <div className="card mt-2">
         <div className="card-header pb-0">
-          <h5>Pinned topics</h5>
+          <h5>Posts destacados</h5>
         </div>
         <div className="card-body p-0">
         <table className="table table-striped mb-0">
@@ -17,7 +16,7 @@ class Pinned extends Component {
                 <th scope="row">-</th>
                 <td className="pl-0"><Title title="[ATENTOS] Próximas fechas de torneos Junio-Julio 2019"></Title></td>
                 <td className="align-middle text-center"><Author author="German" club="Admin"></Author></td>
-                <td className="align-middle text-center">14 responses</td>
+                <td className="align-middle text-center">14 respuestas</td>
               </tr>
               <tr>
                 <th scope="row">-</th>
@@ -37,7 +36,7 @@ class Pinned extends Component {
       </div>
       <div className="card mt-2">
       <div className="card-header pb-0">
-        <h5 className="green">Latest posts in Subforum</h5>
+        <h5>Últimos posts</h5>
       </div>
       <div className="card-body p-0">
         <table className="table table-striped mb-0">
@@ -63,10 +62,9 @@ class Pinned extends Component {
             </tbody>
           </table>
       </div>
-      </div>
     </div>
+    </>
     )
-  }
 }
 
 export default Pinned;

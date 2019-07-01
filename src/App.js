@@ -22,8 +22,8 @@ class App extends Component {
           <Route path="/" exact component={Dashboard} />
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/forum" exact component={Dashboard} />
-          <Route path="/forum/beta" component={Subforum} />
-          <Route path="/forum/topic/1" component={Topic} />
+          <Route path="/forum/subforum" component={Subforum} />
+          <Route path="/forum/topic" component={Topic} />
           <AuthenticateComponent>
             {/* Pages loged in */}
           </AuthenticateComponent>

@@ -8,7 +8,7 @@ const Thread = () => {
     <div className="col-md-9">
       <Post></Post>
     </div>
-    <div className="col-md-3">
+    <div className="col-md-3 mt-2">
       <UserProfile />
     </div>
   </div>

@@ -47,7 +47,7 @@ h1 {
 }
 
 h2 {
-    color: $text-primary !important;
+    color: $deep-blue !important;
     font-family: chunkfive !important;
     font-size: 1.8rem;
     margin: 0;
@@ -90,18 +90,19 @@ hr {
 table {
     white-space: nowrap;
     margin: 0;
+    color: $white !important;
 }
 
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
-    background-color: #c8e6db61;
+    background-color: $deep-blue;
  }
 
 .row-primary {
-    background: #89C6A2;
+    background: $deep-blue;
 }
 
 .row-secondary {
-    background: #D0E5B3;
+    background: $dark-blue;
 }
 
 /* ---------------------------------------------------
@@ -273,6 +274,74 @@ table {
         }
     }    
 }
+
+.fa-heart{
+  color:#e74c3c;
+}
+  [class^="fa fa-star"]{
+    color:#f1c40f;
+  }
+.fa-quote-right{
+  font-size:.5em;
+  }
+
+.topic {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.topic-title{
+    padding:15px;
+    padding-top:0;
+  }
+
+.topic-content {
+  margin-top: 10px;
+}
+
+.topic-footer{
+  background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
+  width:100%;
+  min-height:40px;
+  color: #fff;
+  vertical-align: middle;
+}
+
+#user-description{
+    height:100%;
+    border-left:2px solid rgba(149,189,142,1); 
+    margin:0 auto;
+    text-align:center;
+}
+
+figure img{
+    display :inline !important;
+}
+
+.topic-user-avatar {
+  width: 100%;
+}
+.topic-user-stats {
+  text-align: center; 
+}
+
+h4.online:before{
+    background-color:green;
+    height:10px;
+    width:10px;
+    border: 2px solid rgba(149,189,142,1);
+}
+
+td{
+    width:37% !important;
+}
+dd{
+    margin-left:2% !important;
+}
+    
+
+      
+
 
 /* ---------------------------------------------------
     General Styles

@@ -1,19 +1,9 @@
 import React from 'react';
-import './post.scss';
+import logo from '../../assets/club/shield2.png';
 
 const Post = () => {
   return (
 <div className="container">
-    {/* BREADCRUMB
-      <div className="row clearfix">
-        <div className="col-md-12 column">
-              <ol className="breadcrumb">
-              <li><a href="./">Forum</a></li>
-              <li><a href="./">Web design</a></li>
-              <li className="active">Help me in this code? </li>
-        </ol>
-        </div>
-      </div> */}
   <div className="row clearfix">
     <div className="col-md-12 column">
       <div className="row clearfix">
@@ -21,11 +11,11 @@ const Post = () => {
           <div className="card topic topic-default">
           <div className="row topic-body">
             <div className="col-md-9">
-              <h2><i className="fa fa-smile-o"></i>Who want to buy my best player?</h2>
+              <h2 className="mt-2 text-center">Who want to buy my best player?</h2>
               <hr />
               <div className="topic-heading">
                 <div className="topic-title">
-                  <div className="text-right">
+                  <div className="text-center">
                   <i className="fa fa-calendar"></i> 2014-09-15 , <i className="fa fa-clock-o"></i> 1:35 pm
                   </div>
                </div>
@@ -54,7 +44,7 @@ const Post = () => {
                       </ul>
                       </div>
                       <div>
-                        <img className="topic-user-avatar img-responsive" src="https://scontent.fros2-1.fna.fbcdn.net/v/t1.0-9/19657307_10212682157227385_4910625194758745577_n.jpg?_nc_cat=104&_nc_ht=scontent.fros2-1.fna&oh=71fa89feb896947f2dec1ffe6a60311e&oe=5D15DF9D" alt="Mache Avatar" />
+                        <img className="topic-user-avatar img-responsive" src={logo} alt="Mache Avatar" />
                         <div className="text-center">Deportivo San Pedro<br /><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half"></i> </div>
                       </div>
                             <div className="topic-user-stats">
@@ -75,15 +65,14 @@ const Post = () => {
                 </div>     
               </div>
              </div>
-  <div className="topic-footer">
-    <div className="row pt-2">
-      <div className="col-md-3 pl-4">
+  <div className="topic-footer d-flex justify-content-between pt-2">
+      <div className="pl-4">
         <i className="fa fa-thumbs-up "></i><a href="/"> Thanks </a>| <i className="fa fa-warning "></i><a href="/"> Report </a>
       </div>
-      <div id="thanks" className="col-md-5">
+      {/* <div id="thanks" className="col-md-3">
         
-      </div>
-      <div className="col-md-4">
+      </div> */}
+      <div className="pr-4">
         <span className="fa-stack">
           <i className="fa fa-quote-right fa-stack-1x"></i>
           <i className="fa fa-comment-o fa-lg fa-stack-1x"></i>
@@ -92,7 +81,6 @@ const Post = () => {
         <i className="fa fa-mail-reply "></i><a href="/"> Reply </a> |
         <i className="fa fa-edit "></i><a href="/"> Edit Post </a>
       </div>
-    </div>
   </div>
 </div>
   )

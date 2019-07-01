@@ -12,16 +12,15 @@ class ForumMain extends React.Component {
   }
 
   render() {
-    const userInfo = {logged: true};
+    const userInfo = {logged: false};
   return (
     <div className="row">
       <div className="col-md-9">
-        <TopicContainer></TopicContainer>
+        <TopicContainer />
       </div>
       <div className="col-md-3">
         {userInfo.logged ? 
-        <UserProfile>
-        </UserProfile>
+        <UserProfile />
         : 
         <UserAnonimous />
         }
