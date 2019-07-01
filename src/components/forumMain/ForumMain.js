@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import TopicContainer from './TopicContainer';
+import UserAnonimous from '../topicElements/UserAnonimous'
 import UserProfile from '../topicElements/UserProfile'
 import {fetchForumData} from '../../store/actions/forumActions';
 import {url} from '../../config/config'
@@ -11,14 +12,20 @@ class ForumMain extends React.Component {
   }
 
   render() {
+    const userInfo = {logged: true};
   return (
     <div className="row">
       <div className="col-md-9">
         <TopicContainer></TopicContainer>
       </div>
       <div className="col-md-3">
+        {userInfo.logged ? 
         <UserProfile>
         </UserProfile>
+        : 
+        <UserAnonimous />
+        }
+        
       </div>
     </div>
     )
