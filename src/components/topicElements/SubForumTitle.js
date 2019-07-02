@@ -1,10 +1,10 @@
 import React from 'react';
 
-class Title extends React.Component {
+class SubForumTitle extends React.Component {
   render(){
     return(
         <span>
-          <a href={"/forum/subforum/" + this.props.subForumId + "/topic/" + this.props.slug}>
+          <a href={"/forum/subforum/" + this.props.id}>
             <b className="ml-1">{this.props.title}</b>
           </a>
         </span>
@@ -12,6 +12,6 @@ class Title extends React.Component {
   }
 }
 
-export default Title;
+export default SubForumTitle;
 
 

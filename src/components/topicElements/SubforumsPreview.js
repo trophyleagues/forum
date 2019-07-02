@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import Title from './Title';
+import Description from "./Description";
+import SubForumTitle from "./SubForumTitle";
 
 class SubforumsPreview extends Component {
   render(){
@@ -14,7 +15,8 @@ class SubforumsPreview extends Component {
       {subforums && subforums.length >= 1 ? subforums[0].map((forum) => {
         return <div className="d-flex justify-content-between p-2" key={forum.id}>
           <div>
-            <h3><Title title={forum.name}></Title></h3>
+            <h3><SubForumTitle title={forum.name} id={forum.id}></SubForumTitle></h3>
+            <Description description={forum.description}></Description>
           </div> 
           <div>
             <h4>{forum.total_posts} posts</h4>
