@@ -14,10 +14,10 @@ export function forumIsLoading(bool) {
   }
 }
 
-export function forumFetchData(forum) {
+export function forumFetchData(subforums, announces) {
   return {
       type: 'FORUM_FETCH_DATA_SUCCESS',
-      payload: forum
+      payload: {subforums: subforums, announces: announces}
   }
 }
 
@@ -52,12 +52,14 @@ export function fetchForumData(url, headers) {
   return (dispatch) => {
       dispatch(forumIsLoading(true));
       axios.get(`${url}/forums`, {}, headers)
-        .then((data) => {
-          console.log(data)
-          let announces = data.filter((subforum) => {
+        .then((res) => {
+          console.log(res.data)
+          let announces = res.data.filter((subforum) => {
+            console.log(subforum)
             return subforum.is_announce
           })
-          let subforums = data.filter((subforum) => {
+          let subforums = res.data.filter((subforum) => {
+            console.log(subforum)
             return !subforum.is_announce
           })
           dispatch(forumIsLoading(false))
