@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import AllPosts from './AllPosts';
 import UserProfile from '../topicElements/UserProfile'
 

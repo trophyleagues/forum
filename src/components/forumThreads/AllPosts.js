@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Title from '../topicElements/Title';
 import Author from '../topicElements/Author';
 

@@ -1,8 +1,6 @@
 import React from 'react';
 import Dashboard from './Dashboard';
 import SidebarContainer from '../components/sidebar/SidebarContainer';
-import Header from '../components/header/Header';
-
 
 const Home = () =>  {
     return(

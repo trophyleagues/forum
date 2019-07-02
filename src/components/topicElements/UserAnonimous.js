@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import '../../styles/UserProfile.scss';
 import profilePic from '../../assets/player.png'
 import clubPic from '../../assets/club/shield.jpg'

@@ -55,11 +55,9 @@ export function fetchForumData(url, headers) {
         .then((res) => {
           console.log(res.data)
           let announces = res.data.filter((subforum) => {
-            console.log(subforum)
             return subforum.is_announce
           })
           let subforums = res.data.filter((subforum) => {
-            console.log(subforum)
             return !subforum.is_announce
           })
           dispatch(forumIsLoading(false))

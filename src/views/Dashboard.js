@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/header/Header';
 import ForumMain from '../components/forumMain/ForumMain';
 
 const Dashboard = () => {
