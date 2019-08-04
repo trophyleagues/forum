@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import AllPosts from './AllPosts';
-import UserCard from '../topicElements/UserCard'
+import CreateTopicForm from './CreateTopicForm';
+import UserProfile from '../topicElements/UserProfile'
 import {fetchSubforumData} from '../../store/actions/forumActions';
 import {url} from '../../config/config';
 const ForumThreads  = () => {
@@ -14,10 +14,10 @@ const ForumThreads  = () => {
     return(
       <div className="container row">
         <div className="topic-container col-md-9">
-          <AllPosts />
+          <CreateTopicForm />
         </div>
-        <div className="col-md-3">
-          <UserCard />
+        <div className="col-md-3 mt-2">
+          <UserProfile />
         </div>
       </div>
     )

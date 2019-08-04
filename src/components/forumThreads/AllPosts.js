@@ -5,7 +5,7 @@ import Author from '../topicElements/Author';
 const Pinned = () => {
     return(
       <>
-      <div className="card mt-2">
+      <div className="card">
         <div className="card-header pb-0">
           <h5>Posts destacados</h5>
         </div>

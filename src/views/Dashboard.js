@@ -4,7 +4,7 @@ import ForumMain from '../components/forumMain/ForumMain';
 const Dashboard = () => {
     return(
     <>
-      <div className="container p-2">
+      <div className="container mt-2">
         <ForumMain></ForumMain>
       </div>
     </>

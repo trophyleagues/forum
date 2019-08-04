@@ -5,7 +5,7 @@ import Login from '../components/user/Login'
 const LoginView = () => {
     return(
       <>
-        <div className="container">
+        <div className="container mt-2">
           <Login />
         </div>
       </>

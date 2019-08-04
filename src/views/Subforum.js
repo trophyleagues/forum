@@ -4,7 +4,7 @@ import ForumNav from '../components/forumNav/ForumNav';
 
 const Subforum = () => (
   <>
-    <div className="container">
+    <div className="container mt-2">
       <ForumNav />
       <ForumThreads /> 
     </div>

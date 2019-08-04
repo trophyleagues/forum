@@ -99,7 +99,7 @@ table {
  }
 
 .table-striped > tbody > tr:hover > td, .table-striped > tbody > tr:hover º> th {
-    background: #65b8f8;
+    background: $primary-color;
 }
 
 .row-primary {
@@ -265,6 +265,13 @@ table {
     }
 }
 
+.forums-container {
+    height: 70vh;
+    width: 100%;
+    background: #000000cc;
+    padding: 10px;
+}
+
 .topic-container {
     h3 {
         margin-left: 0;
@@ -315,7 +322,7 @@ table {
 
 #user-description{
     height:100%;
-    border-left:2px solid rgba(149,189,142,1); 
+    border-left:2px solid $primary-color; 
     margin:0 auto;
     text-align:center;
 }
@@ -344,7 +351,17 @@ td{
 dd{
     margin-left:2% !important;
 }
-    
+
+/* NEW TOPIC */
+
+.newtopic-input-title {
+    width: 100%;
+}
+.newtopic-input-content {
+    width: 100%;
+    height: 54vh;
+    margin-top: 10px;
+}
 
       
 
