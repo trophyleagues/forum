@@ -70,15 +70,15 @@ export function fetchForumData(url, headers) {
   }
 }
 
-
-export function fetchSubforumData(url, headers, id) {
-  return (dispatch) => {
-      dispatch(forumIsLoading(true));
-      axios.get(`${url}/subforum/${id}`, {}, headers)
-        .then((data) => {
-          console.log(data)
+export function fetchSubforumData(url, subForumId, headers) {
+  return(dispatch) => {
+    dispatch(forumIsLoading(true));
+    console.log(url, subForumId)
+    axios.get(`${url}/subforum/${subForumId}`, {}, headers)
+        .then((res) => {
+          console.log(res.data)
           dispatch(forumIsLoading(false))
-          dispatch(subforumFetchData(data))
+          dispatch(subforumFetchData(res))
         })
         .catch((err)=> {
           console.log(err)
@@ -87,7 +87,7 @@ export function fetchSubforumData(url, headers, id) {
   }
 }
 
-export function fetchPostData(url, headers, id) {
+export function fetchPostData(url, id, headers) {
   return (dispatch) => {
       dispatch(forumIsLoading(true));
       axios.get(`${url}/post/${id}`, {}, headers)

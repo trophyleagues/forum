@@ -1,18 +1,20 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import TopicContainer from './TopicContainer';
 import UserAnonimous from '../topicElements/UserAnonimous'
 import UserProfile from '../topicElements/UserProfile'
 import {fetchForumData} from '../../store/actions/forumActions';
-import {url} from '../../config/config'
+import {url} from '../../config/config';
 
-class ForumMain extends React.Component {
-  componentDidMount() {
-    this.props.forumData(url)
-  }
+const ForumMain = () => {
+  const dispatch = useDispatch()
 
-  render() {
-    const userInfo = {logged: false};
+  React.useEffect(() => {
+    dispatch(fetchForumData(url))
+  }, [dispatch])
+  
+  const userInfo = {logged: false};
+
   return (
     <div className="row">
       <div className="col-md-9">
@@ -29,12 +31,5 @@ class ForumMain extends React.Component {
     </div>
     )
   }
-}
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-  forumData: (url) => dispatch(fetchForumData(url))
-}
-}
-
-export default connect(null, mapDispatchToProps)(ForumMain);
+export default ForumMain;

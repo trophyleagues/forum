@@ -11,6 +11,7 @@
 
 body {
     font-family: $font-dosis;
+    letter-spacing: 1.5px;
     background: $bg-color; // Dark mode: #243144
     background-image: url('../assets/bg.png');
     background-position: left top;
@@ -96,6 +97,10 @@ table {
 .table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
     background-color: $deep-blue;
  }
+
+.table-striped > tbody > tr:hover > td, .table-striped > tbody > tr:hover º> th {
+    background: #65b8f8;
+}
 
 .row-primary {
     background: $deep-blue;
@@ -271,6 +276,7 @@ table {
         // background: linear-gradient(to right, rgba(115,170,138,1) 0%, rgba(149,189,142,1) 51%, rgba(115,170,138,1) 100%);
         .card-body {
             color: #fff;
+            overflow: hidden;
         }
     }    
 }
