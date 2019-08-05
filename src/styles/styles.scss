@@ -202,7 +202,7 @@ table {
 
 .logo-container {
     background: $dark-blue;
-    width: 15%;
+    min-width: 15%;
     height: 100%;
     color: $light-gray;
     text-align: center;
@@ -211,7 +211,7 @@ table {
 }
 
 .top-menu {
-    width: 80%;
+    max-width: 80%;
     ul {
         position: relative;
         display: flex;
