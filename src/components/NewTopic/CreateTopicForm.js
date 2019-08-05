@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
 import Button from '../topicElements/Button';
 import { url } from '../../config/config';
+import {uuidv4} from '../../utils/uuid.js';
 import axios from 'axios';
 
 const CreateTopicForm = (props) => {
@@ -10,13 +11,14 @@ const CreateTopicForm = (props) => {
 
   const submitMsg = (action, e) => {
     console.log("Enviando: ", action, title, content)
+    var uuid = uuidv4()
     e.preventDefault()
     if(action === "preview") {
       props.history.push('./preview')
     } else if (action === "create") {
       let headers = { "Content-type": 'Application/json' }
       let data = {
-        id: "8ad7705f-cddf-35ae-bf8b-acb25a420e86",
+        id: uuid,
         sub_forum_id: "b10203df-9911-3c5d-8e2e-de480e9102e8",
         author_id: "dc786f34-0217-3bf6-a20b-4f6b2f7890f8",
         title: title,
