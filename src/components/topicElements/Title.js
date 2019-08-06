@@ -1,12 +1,12 @@
 import React from 'react';
-
+import {Link} from 'react-router-dom'
 class Title extends React.Component {
   render(){
     return(
         <span>
-          <a href={"/forum/subforum/" + this.props.subForumId + "/topic/" + this.props.slug}>
+          <Link to={"/forum/subforum/" + this.props.subForumId + "/topic/" + this.props.slug}>
             <b className="ml-1">{this.props.title}</b>
-          </a>
+          </Link>
         </span>
     )
   }

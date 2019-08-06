@@ -16,7 +16,6 @@ const CreateTopicForm = (props) => {
     if(action === "preview") {
       props.history.push('./preview')
     } else if (action === "create") {
-      let headers = { "Content-type": 'Application/json' }
       let data = {
         id: uuid,
         sub_forum_id: "b10203df-9911-3c5d-8e2e-de480e9102e8",
@@ -24,6 +23,7 @@ const CreateTopicForm = (props) => {
         title: title,
         content: content
       }
+      let headers = {'Content-Type': 'application/json'}
       axios.post(`${url}/post`, data, headers).then(res => console.log(res)).catch((err) => console.log(err))
     }
   }
