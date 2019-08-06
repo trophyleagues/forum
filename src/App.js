@@ -22,9 +22,9 @@ class App extends Component {
           <Route path="/" exact component={Dashboard} />
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/forum" exact component={Dashboard} />
-          <Route path="/forum/subforum" component={Subforum} />
-          <Route exact path="/forum/topic" component={Topic} />
-          <Route path="/forum/topic/new" component={CreateTopic} />
+          <Route path="/forum/subforum/:slug" component={Subforum} />
+          <Route exact path="/forum/topic/:slug" component={Topic} />
+          <Route path="/forum/topic/:slug/new" component={CreateTopic} />
           <AuthenticateComponent>
             {/* Pages loged in */}
           </AuthenticateComponent>
