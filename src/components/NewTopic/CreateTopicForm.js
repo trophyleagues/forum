@@ -33,7 +33,7 @@ const CreateTopicForm = (props) => {
         <form>
           <input className="newtopic-input-title" type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)}/>
           <input className="newtopic-input-content" type="textarea" placeholder="Write your message here" onChange={(e) => setContent(e.target.value)} />
-          <div className="d-flex w-50 justify-content-end">
+          <div className="d-flex justify-content-end">
             <button className="btn btn-gradient m-2" onClick={(e) => submitMsg("preview", e)}>Preview</button>
             <button className="btn btn-gradient m-2" onClick={(e) => submitMsg("create", e)}>Create</button>
           </div>
