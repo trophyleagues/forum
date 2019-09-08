@@ -1,13 +1,28 @@
 /*
     DEMO STYLE
 */
+
 @import "../../node_modules/bootstrap/scss/bootstrap";
 @import './vars.scss';
-@font-face { font-family: chunkfive; src: url('../assets/fonts/Chunkfive.otf'); }
-@font-face { font-family: dosis; src: url('../assets/fonts/Dosis-Light.otf'); }
-@font-face { font-family: dosis-extrabold; src: url('../assets/fonts/Dosis-ExtraBold.otf'); }
-@font-face { font-family: sspro; src: url('../assets/fonts/SourceSansPro-Regular.otf'); }
+@font-face {
+    font-family: chunkfive;
+    src: url('../assets/fonts/Chunkfive.otf');
+}
 
+@font-face {
+    font-family: dosis;
+    src: url('../assets/fonts/Dosis-Light.otf');
+}
+
+@font-face {
+    font-family: dosis-extrabold;
+    src: url('../assets/fonts/Dosis-ExtraBold.otf');
+}
+
+@font-face {
+    font-family: sspro;
+    src: url('../assets/fonts/SourceSansPro-Regular.otf');
+}
 
 body {
     font-family: $font-dosis;
@@ -55,11 +70,11 @@ h2 {
 }
 
 h5 {
-  color: $primary-color;
-  font-family: chunkfive !important;
-  font-size: 1.4rem;
-  font-weight: lighter;
-  margin: 0;
+    color: $primary-color;
+    font-family: chunkfive !important;
+    font-size: 1.4rem;
+    font-weight: lighter;
+    margin: 0;
 }
 
 hr {
@@ -70,20 +85,22 @@ hr {
 }
 
 .btn.btn-primary {
-  background-image: linear-gradient(to right, $dark-blue, $deep-blue);
-  border-color: $dark-blue;
-  color: #ffffff;
-  font-family: chunkfive;
-  font-size: 17px;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  margin-top: 5px;
+    background-image: linear-gradient(to right, $dark-blue, $deep-blue);
+    border-color: $dark-blue;
+    color: #ffffff;
+    font-family: chunkfive;
+    font-size: 17px;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 5px;
 }
 
 .sidebar-container {
     width: 15%;
 }
+
+
 /* ---------------------------------------------------
     Tables
 ----------------------------------------------------- */
@@ -94,11 +111,13 @@ table {
     color: $white !important;
 }
 
-.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+.table-striped>tbody>tr:nth-child(2n+1)>td,
+.table-striped>tbody>tr:nth-child(2n+1)>th {
     background-color: $deep-blue;
- }
+}
 
-.table-striped > tbody > tr:hover > td, .table-striped > tbody > tr:hover º> th {
+.table-striped>tbody>tr:hover>td,
+.table-striped>tbody>tr:hover º>th {
     background: $primary-color;
 }
 
@@ -110,6 +129,7 @@ table {
     background: $dark-blue;
 }
 
+
 /* ---------------------------------------------------
     Colors
 ----------------------------------------------------- */
@@ -117,14 +137,16 @@ table {
 .black {
     color: $black;
 }
+
 .text-main {
     color: $primary-color
 }
+
 .green-main {
     color: $light-green;
 }
 
-.green-secondary {
+.green-secondary {
     color: #D0E5B3;
 }
 
@@ -160,13 +182,14 @@ table {
     color: #ffffff;
 }
 
+
 /* ---------------------------------------------------
     Fonts
 ----------------------------------------------------- */
 
 .chunkfive {
-  font-family: chunkfive !important;
-  font-style: bold;
+    font-family: chunkfive !important;
+    font-style: bold;
 }
 
 
@@ -176,7 +199,8 @@ table {
 
 .border-green {
     border: 1px #69C638;
-  }
+}
+
 
 /* ---------------------------------------------------
     Borders
@@ -187,11 +211,13 @@ table {
     color: #f2f7f7;
     border: 2px #9ac091;
     background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
-  }
-    
+}
+
+
 /* ---------------------------------------------------
     Header
 ----------------------------------------------------- */
+
 .header {
     background: $deep-blue;
     height: 50px;
@@ -208,7 +234,7 @@ table {
         text-align: center;
         font-size: 1.5rem;
         padding: 5px 20px;
-    } 
+    }
     .top-menu {
         max-width: 80%;
         ul {
@@ -227,12 +253,10 @@ table {
         li.is-selected {
             border-bottom: solid 3px $primary-color;
         }
-        
         li:hover {
             border-bottom: solid 3px $light-gray;
         }
-        
-    }   
+    }
 }
 
 
@@ -279,7 +303,8 @@ table {
         margin-left: 0;
     }
     .card {
-        background: $body-bg; /* Old browsers */
+        background: $body-bg;
+        /* Old browsers */
         border: solid 1px #fff;
         border-radius: 0;
         // background: linear-gradient(to right, rgba(115,170,138,1) 0%, rgba(149,189,142,1) 51%, rgba(115,170,138,1) 100%);
@@ -287,85 +312,89 @@ table {
             color: #fff;
             overflow: hidden;
         }
-    }    
+    }
 }
 
-.fa-heart{
-  color:#e74c3c;
+.fa-heart {
+    color: #e74c3c;
 }
-  [class^="fa fa-star"]{
-    color:#f1c40f;
-  }
-.fa-quote-right{
-  font-size:.5em;
-  }
+
+[class^="fa fa-star"] {
+    color: #f1c40f;
+}
+
+.fa-quote-right {
+    font-size: .5em;
+}
 
 .topic {
-  padding: 10px;
-  margin-top: 10px;
+    padding: 10px;
+    margin-top: 10px;
 }
 
-.topic-title{
-    padding:15px;
-    padding-top:0;
-  }
+.topic-title {
+    padding: 15px;
+    padding-top: 0;
+}
 
 .topic-content {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
-.topic-footer{
-  background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
-  width:100%;
-  min-height:40px;
-  color: #fff;
-  vertical-align: middle;
+.topic-footer {
+    background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
+    width: 100%;
+    min-height: 40px;
+    color: #fff;
+    vertical-align: middle;
 }
 
-#user-description{
-    height:100%;
-    border-left:2px solid $primary-color; 
-    margin:0 auto;
-    text-align:center;
+#user-description {
+    height: 100%;
+    border-left: 2px solid $primary-color;
+    margin: 0 auto;
+    text-align: center;
 }
 
-figure img{
-    display :inline !important;
+figure img {
+    display: inline !important;
 }
 
 .topic-user-avatar {
-  width: 100%;
+    width: 100%;
 }
+
 .topic-user-stats {
-  text-align: center; 
+    text-align: center;
 }
 
-h4.online:before{
-    background-color:green;
-    height:10px;
-    width:10px;
-    border: 2px solid rgba(149,189,142,1);
+h4.online:before {
+    background-color: green;
+    height: 10px;
+    width: 10px;
+    border: 2px solid rgba(149, 189, 142, 1);
 }
 
-td{
-    width:37% !important;
+td {
+    width: 37% !important;
 }
-dd{
-    margin-left:2% !important;
+
+dd {
+    margin-left: 2% !important;
 }
+
 
 /* NEW TOPIC */
 
 .newtopic-input-title {
     width: 100%;
 }
+
 .newtopic-input-content {
     width: 100%;
     height: 54vh;
     margin-top: 10px;
 }
-
-      
 
 
 /* ---------------------------------------------------
@@ -378,15 +407,21 @@ dd{
     width: 25px;
 }
 
+
 /* ---------------------------------------------------
     Login screen
 ----------------------------------------------------- */
+
 .login-box {
     .card {
         background: $bg-color !important;
         color: $text-primary;
     }
+    .form-group {
+        margin-bottom: 0.5rem;
+    }
 }
+
 
 /* ---------------------------------------------------
     MEDIAQUERIES
@@ -441,6 +476,7 @@ dd{
     }
 }
 
+
 /* ---------------------------------------------------
     Players Screen STYLE
 ----------------------------------------------------- */
@@ -450,7 +486,7 @@ dd{
     font-family: 'chunkfive', sans-serif;
     font-weight: bolder;
     margin-bottom: 0;
-  }
+}
 
 .list-container {
     background-color: #ffffff;
@@ -474,9 +510,11 @@ dd{
     text-align: center;
 }
 
+
 /* ---------------------------------------------------
     Players MODAL
 ----------------------------------------------------- */
+
 .modal-content {
     border-radius: 0px;
     -webkit-border-radius: 0px;
@@ -487,23 +525,26 @@ dd{
     border: 1px #B7D5A6 !important;
 }
 
+
 /* ---------------------------------------------------
     Tactics Screen STYLE
 ----------------------------------------------------- */
 
 .tactic-container {
-  background-color: #E9F2DA;
-  padding: 10px 40px;
-  width: 100%;
+    background-color: #E9F2DA;
+    padding: 10px 40px;
+    width: 100%;
 }
 
 
 /* ---------------------------------------------------
     FILTERS
 ----------------------------------------------------- */
+
 #r-checkbox {
     display: none;
-  }
+}
+
 .r-checker {
     background-image: url('../assets/img/r-checkboxes.png');
     background-position: left center;
@@ -511,14 +552,16 @@ dd{
     width: 26px;
     height: 20px;
     background-repeat: no-repeat;
-  }
-#r-checkbox:checked + .r-checker {
+}
+
+#r-checkbox:checked+.r-checker {
     background-position: right center;
-  }
+}
 
 #l-checkbox {
     display: none;
-  }
+}
+
 .l-checker {
     background-image: url('../assets/img/l-checkboxes.png');
     background-position: left center;
@@ -526,15 +569,16 @@ dd{
     width: 26px;
     height: 20px;
     background-repeat: no-repeat;
-  }
-#l-checkbox:checked + .l-checker {
-    background-position: right center;
-  }
+}
 
+#l-checkbox:checked+.l-checker {
+    background-position: right center;
+}
 
 #m-checkbox {
     display: none;
-  }
+}
+
 .m-checker {
     background-image: url('../assets/img/m-checkboxes.png');
     background-position: left center;
@@ -542,10 +586,12 @@ dd{
     width: 26px;
     height: 20px;
     background-repeat: no-repeat;
-  }
-#m-checkbox:checked + .m-checker {
+}
+
+#m-checkbox:checked+.m-checker {
     background-position: right center;
-  }
+}
+
 
 /* ---------------------------------------------------
     Drag and drop
@@ -557,7 +603,7 @@ dd{
 }
 
 .movable:not(.dragging) {
-transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease-in-out;
 }
 
 
@@ -566,14 +612,19 @@ transition: transform 300ms ease-in-out;
 ----------------------------------------------------- */
 
 .login-box {
-  max-width: 600px;
+    max-width: 600px;
+    label {
+        margin: 0;
+    }
 }
+
 
 /* ---------------------------------------------------
     Widgets
 ----------------------------------------------------- */
+
 // CUPS
-#cups {
+#cups {
     background-color: #2b2e33 !important;
     font-family: dosis, helvetica;
     width: 100%;

@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import axios from 'axios';
+import {url_login} from '../../config/endpoints';
 
 class Login extends Component {
   constructor(props){
@@ -20,7 +22,7 @@ class Login extends Component {
 
   submit(e) {
     e.preventDefault()
-    axios.post('http://localhost:8000/api/v1/auth/login', {
+    axios.post(url_login, {
       email: this.state.email,
       password: this.state.password
     }).then(res => {
@@ -50,7 +52,7 @@ class Login extends Component {
             <button type="submit" className="btn btn-gradient d-flex">Enviar</button>
             </div>
             <div className="text-center">
-              <small><a href="/register"><span className="text-main">Registrate</span> si aún no tienes una cuenta</a></small>
+              <small><Link to="/register"><span className="text-main">Registrate</span> si aún no tienes una cuenta</Link></small>
             </div>
           </form>
           </div>
