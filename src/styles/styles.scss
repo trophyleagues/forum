@@ -632,3 +632,11 @@ dd {
     color: #af8121;
     font-size: 0.7rem;
 }
+
+.sweet-loading {
+    background: #212529ba;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 4;
+}
