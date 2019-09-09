@@ -14,14 +14,19 @@ const Loading = () => {
   `
 
   return (
+  <>
+  {loading &&
   <div className='sweet-loading'>
-  <ClipLoader 
-    css={override}
-    sizeUnit={"px"}
-    size={150}
-    color={'#65b8f8'}
-    loading={true} />
-    </div>)
+    <ClipLoader 
+      css={override}
+      sizeUnit={"px"}
+      size={150}
+      color={'#65b8f8'}
+      loading={true} />
+  </div>
+  }
+  </>
+  )
 }
 
 export default Loading;

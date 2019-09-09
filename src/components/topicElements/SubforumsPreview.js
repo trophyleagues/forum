@@ -1,11 +1,10 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
+import React from 'react';
+import {useSelector} from 'react-redux'
 import Description from "./Description";
 import SubForumTitle from "./SubForumTitle";
 
-class SubforumsPreview extends Component {
-  render(){
-    let {subforums} = this.props
+const SubforumsPreview = () => {
+    const subforums = useSelector((state) => state.forum.subforums)
     return(
       <div className="card mt-2 p-2">
       <div className="card-header pb-0">
@@ -29,13 +28,7 @@ class SubforumsPreview extends Component {
       </div>
     </div>
     )
-  }
 }
 
-const mapStateToProps = (state) => {
-  return{
-    subforums: state.forum.subforums
-  }
-}
 
-export default connect(mapStateToProps)(SubforumsPreview)
+export default SubforumsPreview
