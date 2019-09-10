@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { useDispatch } from 'react-redux';
-import Button from '../topicElements/Button';
+import Button from '../TopicElements/Button';
 import { url } from '../../config/config';
 import {uuidv4} from '../../utils/uuid.js';
 import axios from 'axios';

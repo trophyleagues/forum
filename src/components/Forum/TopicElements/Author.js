@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Author extends Component {
-  render(){
+const Author = () => {
     return(
       <span className="card-text"><small className="gray"><b>{this.props.author}</b> - {this.props.club}</small></span>
     )
-  }
 }
 
 export default Author;

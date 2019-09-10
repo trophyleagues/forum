@@ -1,8 +1,8 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import logo from '../../assets/club/shield2.png';
-import { fetchPostData } from '../../store/actions/forumActions';
-import { url } from '../../config/config';
+import logo from '../../../assets/club/shield2.png';
+import { fetchPostData } from '../../../store/actions/forumActions';
+import { url } from '../../../config/config';
 
 const Post = () => {
   const dispatch = useDispatch()

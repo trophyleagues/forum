@@ -1,6 +1,6 @@
 import React from 'react';
 import NewTopic from '../components/NewTopic';
-import ForumNav from '../components/forumNav/ForumNav';
+import ForumNav from '../components/Forum/ForumNav/ForumNav';
 
 const Topic = () => {
     return(

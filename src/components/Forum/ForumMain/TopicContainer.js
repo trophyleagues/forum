@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import SubforumsPreview from '../topicElements/SubforumsPreview';
-import Announces from '../topicElements/Announces';
+import SubforumsPreview from '../TopicElements/SubforumsPreview';
+import Announces from '../TopicElements/Announces';
 
 class TopicContainer extends Component {
   render(){

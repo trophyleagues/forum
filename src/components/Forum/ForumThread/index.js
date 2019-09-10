@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from '../topicElements/UserCard'
+import UserCard from '../TopicElements/UserCard'
 import Post from './post';
 
 const Thread = () => {

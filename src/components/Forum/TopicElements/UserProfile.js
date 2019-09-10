@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import Button from '../topicElements/Button';
-import '../../styles/UserProfile.scss';
-import profilePic from '../../assets/player.png'
-import clubPic from '../../assets/club/shield.jpg'
+import Button from './Button';
+import '../../../styles/UserProfile.scss';
+import profilePic from '../../../assets/player.png'
+import clubPic from '../../../assets/club/shield.jpg'
 
 class UserProfile extends Component {
   render(){

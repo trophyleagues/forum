@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-class Header extends React.Component {
-  render(){
+const Header = () => {
     return(
     <>
     <div className="header d-flex">
@@ -37,6 +36,5 @@ class Header extends React.Component {
     </>
     )
   }
-}
 
 export default Header;

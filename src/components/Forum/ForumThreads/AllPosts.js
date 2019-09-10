@@ -1,8 +1,11 @@
 import React from 'react';
-import Title from '../topicElements/Title';
-import Author from '../topicElements/Author';
+import {useSelector} from 'react-redux';
+import Title from '../TopicElements/Title';
+import Author from '../TopicElements/Author';
 
 const Pinned = () => {
+    const posts = useSelector(state => state.forum.posts)
+    const pinned = useSelector(state => state.forum.pinned)
     return(
       <>
       <div className="card">
@@ -11,25 +14,15 @@ const Pinned = () => {
         </div>
         <div className="card-body p-0">
         <table className="table table-striped mb-0">
-            <tbody>
-              <tr>
+          <tbody>
+              {pinned && pinned.map(post => {
+              return <tr key={post.id}>
                 <th scope="row">-</th>
-                <td className="pl-0"><Title title="[ATENTOS] Próximas fechas de torneos Junio-Julio 2019"></Title></td>
-                <td className="align-middle text-center"><Author author="German" club="Admin"></Author></td>
-                <td className="align-middle text-center">14 respuestas</td>
+                <td className=""><Title title={post.title}></Title></td>
+                <td className="align-middle text-center"><Author author={post.author.name} club=""></Author></td>
+                <td>{post.total_responses}</td>
               </tr>
-              <tr>
-                <th scope="row">-</th>
-                <td className="pl-0"><Title title="Reglas del foro"></Title></td>
-                <td className="align-middle text-center"><Author author="Uri" club="Admin"></Author></td>
-                <td className="align-middle text-center">231 responses</td>
-              </tr>
-              <tr>
-                <th scope="row">-</th>
-                <td className="pl-0"><Title title="Salón de la fama. Partidos épicos."></Title></td>
-                <td className="align-middle text-center"><Author author="Mache" club="Admin"></Author></td>
-                <td className="align-middle text-center">23 responses</td>
-              </tr>
+              })}
             </tbody>
           </table>
         </div>
@@ -41,12 +34,14 @@ const Pinned = () => {
       <div className="card-body p-0">
         <table className="table table-striped mb-0">
             <tbody>
-              <tr>
+              {posts && posts.map((post) => {
+              return <tr key={post.id}>
                 <th scope="row">-</th>
-                <td className=""><Title title="Like the cofee"></Title></td>
-                <td className="align-middle text-center"><Author author="Maradona" club="Boca Juniors"></Author></td>
-                <td>14 responses</td>
+                <td className=""><Title title={post.title}></Title></td>
+                <td className="align-middle text-center"><Author author={post.author.name} club=""></Author></td>
+                <td>{post.total_responses}</td>
               </tr>
+              })}
             </tbody>
           </table>
       </div>

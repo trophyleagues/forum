@@ -12,7 +12,7 @@ const Details = (props) => {
           <span>
             <b className="mr-3">
               {props.favs} 
-              <img src={require("../../assets/icons/fav.png")} width="20px" className="m-1 mb-2" alt="favorite"/>
+              <img src={require("../../../assets/icons/fav.png")} width="20px" className="m-1 mb-2" alt="favorite"/>
             </b>
             <b className="mr-5">
             {props.opinions}  
