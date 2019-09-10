@@ -8,6 +8,7 @@ import Dashboard from './views/Dashboard';
 import Subforum from './views/Subforum';
 import Topic from './views/Topic';
 import CreateTopic from './views/CreateTopic';
+import Loading from './components/GeneralComponents/Loading';
 
 // import LoginView from './views/LoginView';
 
@@ -18,15 +19,16 @@ class App extends Component {
       <BrowserRouter>
       <>
         <Header />
+        <Loading />
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/" exact component={Dashboard} />
           {/* <Route path="/" exact component={Home} /> */}
           <Route path="/forum" exact component={Dashboard} />
-          <Route path="/forum/subforum/:slug" component={Subforum} />
-          <Route exact path="/forum/topic/:slug" component={Topic} />
-          <Route path="/forum/topic/:slug/new" component={CreateTopic} />
+          <Route path="/forum/subforum/:id" component={Subforum} />
+          <Route exact path="/forum/topic/:id" component={Topic} />
+          <Route path="/forum/topic/:id/new" component={CreateTopic} />
           <AuthenticateComponent>
             {/* Pages loged in */}
           </AuthenticateComponent>

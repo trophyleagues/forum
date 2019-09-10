@@ -15,7 +15,7 @@ const SubforumsPreview = () => {
         return <div className="d-flex justify-content-between p-2" key={forum.id}>
           <div>
             <h3>
-              <SubForumTitle title={forum.name} slug={forum.slug} id={forum.id}></SubForumTitle>
+              <SubForumTitle title={forum.name} id={forum.id}></SubForumTitle>
             </h3>
               <Description description={forum.description}></Description>
           </div> 

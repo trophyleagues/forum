@@ -9,8 +9,8 @@ export function forumHasErrored(bool) {
 
 export function forumIsLoading(bool) {
   return {
-      type: 'FORUM_IS_LOADING',
-      isLoading: bool
+      type: 'LOADING',
+      payload: bool
   }
 }
 
@@ -74,7 +74,7 @@ export function fetchSubforumData(url, subForumId, headers) {
   return(dispatch) => {
     dispatch(forumIsLoading(true));
     console.log(url, subForumId)
-    axios.get(`${url}/subforum/${subForumId}`, {}, headers)
+    axios.get(`${url}/${subForumId}`, {}, headers)
         .then((res) => {
           console.log(res.data)
           dispatch(forumIsLoading(false))
@@ -82,6 +82,7 @@ export function fetchSubforumData(url, subForumId, headers) {
         })
         .catch((err)=> {
           console.log(err)
+          dispatch(forumIsLoading(false))
           dispatch(forumHasErrored(true))
         })
   }

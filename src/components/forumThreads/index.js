@@ -1,14 +1,17 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import AllPosts from './AllPosts';
 import UserCard from '../topicElements/UserCard'
 import {fetchSubforumData} from '../../store/actions/forumActions';
-import {url} from '../../config/config';
-const ForumThreads  = () => {
+import {subforum} from '../../config/endpoints';
+
+const ForumThreads  = (props) => {
   const dispatch = useDispatch()
+  const posts = useSelector((state) => state.forum.subforums)
 
   React.useEffect(() => {
-    dispatch(fetchSubforumData(url, 1))
+    dispatch(fetchSubforumData(subforum, props.match.params.id))
   }, [dispatch])
 
     return(
@@ -23,4 +26,4 @@ const ForumThreads  = () => {
     )
 }
 
-export default ForumThreads;
+export default withRouter(ForumThreads);
