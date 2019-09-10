@@ -47,18 +47,6 @@ const Pinned = () => {
                 <td className="align-middle text-center"><Author author="Maradona" club="Boca Juniors"></Author></td>
                 <td>14 responses</td>
               </tr>
-              <tr>
-                <th scope="row">-</th>
-                <td><Title title="Users from Argentina here?"></Title></td>
-                <td className="align-middle text-center"><Author author="Messi" club="El Barça"></Author></td>
-                <td>231 responses</td>
-              </tr>
-              <tr>
-                <th scope="row">-</th>
-                <td><Title title="I think Club Atletico Platense is a very good club"></Title></td>
-                <td className="align-middle text-center"><Author author="Arturo" club="Los locos del asado"></Author></td>
-                <td>23 responses</td>
-              </tr>
             </tbody>
           </table>
       </div>
