@@ -19,7 +19,7 @@ class App extends Component {
       <BrowserRouter>
       <>
         <Header />
-        <Loading />
+        {/* <Loading /> */}
         <Switch>
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />

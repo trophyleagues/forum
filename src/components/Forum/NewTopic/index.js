@@ -1,9 +1,9 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import CreateTopicForm from './CreateTopicForm';
-import UserProfile from '../topicElements/UserProfile'
-import {fetchSubforumData} from '../../store/actions/forumActions';
-import {url} from '../../config/config';
+import UserProfile from '../TopicElements/UserProfile'
+import {fetchSubforumData} from '../../../store/actions/forumActions';
+import {url} from '../../../config/config';
 const ForumThreads  = () => {
   const dispatch = useDispatch()
 

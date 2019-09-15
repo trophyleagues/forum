@@ -1,5 +1,5 @@
 import React from 'react';
-import NewTopic from '../components/NewTopic';
+import NewTopic from '../components/Forum/NewTopic';
 import ForumNav from '../components/Forum/ForumNav/ForumNav';
 
 const Topic = () => {
