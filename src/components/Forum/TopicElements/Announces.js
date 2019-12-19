@@ -23,7 +23,7 @@ const Announces = () => {
               </td>
               <td><span className="text-center">75</span></td>
               <td><span className="text-center">835</span></td>
-              <td><span>By Freedom Today</span></td>
+              <td><span>By <a href="#">Freedom</a> Today</span></td>
             </tr>
           </tbody>
         </table>

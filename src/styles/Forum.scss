@@ -54,6 +54,7 @@ table {
         background: rgba(0, 0, 0, 0.6);
         tr {
             padding: 5px;
+            border-bottom: 1px solid $primary-color;
             .topic-title {
                 font-size: 0.8rem;
                 display: flex;

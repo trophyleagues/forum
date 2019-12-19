@@ -24,12 +24,12 @@ const SubforumsPreview = () => {
                 </div>
                 <div className="title">
                   <span className="">{forum.name}</span><br />
-                  <span className="author">By <a href="#">{forum.autor}</a> </span> <span className="date"> Today @ 11:09 AM</span>
+                  <span className="author">By <a href="#">{forum.author.name}</a> </span> <span className="date"> {forum.created_at}</span>
                 </div>
               </td>
-              <td><span className="text-center">75</span></td>
+              <td><span className="text-center">{forum.total_posts}</span></td>
               <td><span className="text-center">835</span></td>
-              <td><span>By Freedom Today</span></td>
+              <td><span>By <a href="#">{forum.author.name}</a>Today</span></td>
             </tr>
             )})
             : <div>No se encontraron subforos</div>}
