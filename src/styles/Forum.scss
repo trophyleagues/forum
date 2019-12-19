@@ -1,0 +1,77 @@
+@import './vars.scss';
+.forums-container {
+    height: 70vh;
+    width: 100%;
+    background: #000000cc;
+}
+
+.topic-container {
+    h3 {
+        margin-left: 0;
+    }
+}
+
+.fa-heart {
+    color: #e74c3c;
+}
+
+[class^="fa fa-star"] {
+    color: #f1c40f;
+}
+
+.fa-quote-right {
+    font-size: .5em;
+}
+
+.topic {
+    margin-top: 10px;
+}
+
+.topic-content {
+    margin-top: 10px;
+}
+
+.topic-footer {
+    background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
+    width: 100%;
+    min-height: 40px;
+    vertical-align: middle;
+}
+
+table {
+    width: 100% !important;
+    table-layout: fixed;
+    thead {
+        background: #414548;
+        color: $white;
+        text-transform: uppercase;
+        padding-left: 10px;
+        th {
+            padding-left: 10px;
+        }
+    }
+    tbody {
+        background: rgba(0, 0, 0, 0.6);
+        tr {
+            padding: 5px;
+            .topic-title {
+                font-size: 0.8rem;
+                display: flex;
+                line-height: 0.9rem;
+                width: 40% !important;
+                text-overflow: ellipsis;
+                text-align: left !important;
+                .topic-ico {
+                    padding: 5px;
+                }
+            }
+            td {
+                text-align: center;
+                span {
+                    vertical-align: middle;
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}

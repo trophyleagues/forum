@@ -51,7 +51,7 @@ b {
 a,
 a:hover,
 a:focus {
-    color: inherit;
+    color: $primary-color;
     text-decoration: none;
     transition: all 0.3s;
 }
@@ -63,7 +63,7 @@ h1 {
 }
 
 h2 {
-    color: $deep-blue !important;
+    color: $white !important;
     font-family: chunkfive !important;
     font-size: 1.8rem;
     margin: 0;
@@ -289,64 +289,6 @@ table {
         padding-top: 15px;
         height: 90%;
     }
-}
-
-.forums-container {
-    height: 70vh;
-    width: 100%;
-    background: #000000cc;
-    padding: 10px;
-}
-
-.topic-container {
-    h3 {
-        margin-left: 0;
-    }
-    .card {
-        background: $body-bg;
-        /* Old browsers */
-        border: solid 1px #fff;
-        border-radius: 0;
-        // background: linear-gradient(to right, rgba(115,170,138,1) 0%, rgba(149,189,142,1) 51%, rgba(115,170,138,1) 100%);
-        .card-body {
-            color: #fff;
-            overflow: hidden;
-        }
-    }
-}
-
-.fa-heart {
-    color: #e74c3c;
-}
-
-[class^="fa fa-star"] {
-    color: #f1c40f;
-}
-
-.fa-quote-right {
-    font-size: .5em;
-}
-
-.topic {
-    padding: 10px;
-    margin-top: 10px;
-}
-
-.topic-title {
-    padding: 15px;
-    padding-top: 0;
-}
-
-.topic-content {
-    margin-top: 10px;
-}
-
-.topic-footer {
-    background: linear-gradient(to right, $second-light-blue 0%, $light-blue 100%);
-    width: 100%;
-    min-height: 40px;
-    color: #fff;
-    vertical-align: middle;
 }
 
 #user-description {

@@ -6,27 +6,36 @@ import SubForumTitle from "./SubForumTitle";
 const SubforumsPreview = () => {
     const subforums = useSelector((state) => state.forum.subforums)
     return(
-      <div className="card mt-2 p-2">
-      <div className="card-header pb-0">
-        <h5>Forums</h5>
+      <div className="announces-container">
+        <table>
+          <thead>
+            <th style={{width: '55%'}}>Topics</th>
+            <th style={{width: '10%'}}>Replies</th>
+            <th style={{width: '15%'}}>Views</th>
+            <th style={{width: '20%'}}>Last Post</th>
+          </thead>
+          <tbody>
+          {subforums && subforums.length >= 1 ? subforums[0].map((forum) => {
+            return (
+            <tr>
+              <td className="topic-title">
+                <div className="topic-ico">
+                  IMG
+                </div>
+                <div className="title">
+                  <span className="">{forum.name}</span><br />
+                  <span className="author">By <a href="#">{forum.autor}</a> </span> <span className="date"> Today @ 11:09 AM</span>
+                </div>
+              </td>
+              <td><span className="text-center">75</span></td>
+              <td><span className="text-center">835</span></td>
+              <td><span>By Freedom Today</span></td>
+            </tr>
+            )})
+            : <div>No se encontraron subforos</div>}
+          </tbody>
+        </table>
       </div>
-      <div className="card-body pt-2 pl-2 pb-0">
-      {subforums && subforums.length >= 1 ? subforums[0].map((forum) => {
-        return <div className="d-flex justify-content-between p-2" key={forum.id}>
-          <div>
-            <h3>
-              <SubForumTitle title={forum.name} id={forum.id}></SubForumTitle>
-            </h3>
-              <Description description={forum.description}></Description>
-          </div> 
-          <div>
-            <h4>{forum.total_posts} posts</h4>
-          </div> 
-          <hr />
-        </div>
-      }) : <div>No se encontraron subforos</div>} 
-      </div>
-    </div>
     )
 }
 

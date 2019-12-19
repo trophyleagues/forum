@@ -1,18 +1,33 @@
 import React from 'react';
-import Title from './Title';
-import Details from './Details';
 
 const Announces = () => {
     return(
-      <div className="card mt-2">
-      <div className="card-header pb-0">
-        <h5>Announces</h5>
+      <div className="announces-container">
+        <table>
+          <thead>
+            <th style={{width: '55%'}}>Announcements</th>
+            <th style={{width: '10%'}}>Replies</th>
+            <th style={{width: '15%'}}>Views</th>
+            <th style={{width: '20%'}}>Last Post</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td className="topic-title">
+                <div className="topic-ico">
+                  IMG
+                </div>
+                <div className="title">
+                  <span className="">LOREM IPSUM DOLOR SIT AMET CONSECUTURNUCTUS</span><br />
+                  <span className="author">By <a href="#">Wage</a> </span> <span className="date"> Today @ 11:09 AM</span>
+                </div>
+              </td>
+              <td><span className="text-center">75</span></td>
+              <td><span className="text-center">835</span></td>
+              <td><span>By Freedom Today</span></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <div className="card-body p-2">
-        <Title title="Anunciamos que el 12/12/2222 se larga la Beta!!!"></Title>
-        <Details tags="Anounces" date="Hoy" favs="999" opinions="132 &nbsp;"></Details>
-      </div>
-    </div>
     )
   }
 
