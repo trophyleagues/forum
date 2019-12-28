@@ -6,7 +6,7 @@ const Dashboard = () => {
     return(
     <>
       <div className="container">
-        <h2>Forum</h2>
+        <h2 className="section-title">Forum</h2>
         <ForumMain></ForumMain>
       </div>
     </>

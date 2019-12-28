@@ -3,12 +3,12 @@ import React from 'react';
 const Announces = () => {
     return(
       <div className="announces-container">
-        <table>
+        <table className="table-striped">
           <thead>
-            <td style={{width: '55%'}}>Announcements</td>
-            <td style={{width: '10%'}}>Replies</td>
-            <td style={{width: '15%'}}>Views</td>
-            <td style={{width: '20%'}}>Last Post</td>
+            <td className="title-td">Announcements</td>
+            <td>Replies</td>
+            <td>Views</td>
+            <td>Last Post</td>
           </thead>
           <tbody>
             <tr>

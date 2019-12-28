@@ -1,5 +1,5 @@
 import React from 'react';
-import UserCard from '../TopicElements/UserCard'
+import ForumRightMenu from '../TopicElements/ForumRightMenu'
 import Post from './post';
 
 const Thread = () => {
@@ -9,7 +9,7 @@ const Thread = () => {
       <Post></Post>
     </div>
     <div className="col-md-3">
-      <UserCard />
+      <ForumRightMenu />
     </div>
   </div>
     )

@@ -7,12 +7,12 @@ const SubforumsPreview = () => {
     const subforums = useSelector((state) => state.forum.subforums)
     return(
       <div className="announces-container">
-        <table>
+        <table className="table-striped">
           <thead>
-            <td style={{width: '55%'}}>Topics</td>
-            <td style={{width: '10%'}}>Replies</td>
-            <td style={{width: '15%'}}>Views</td>
-            <td style={{width: '20%'}}>Last Post</td>
+            <td className="title-td">Topics</td>
+            <td>Replies</td>
+            <td>Views</td>
+            <td>Last Post</td>
           </thead>
           <tbody>
           {subforums && subforums.length >= 1 ? subforums[0].map((forum) => {
@@ -35,6 +35,13 @@ const SubforumsPreview = () => {
             : <div>No se encontraron subforos</div>}
           </tbody>
         </table>
+        <div className="forum-actions">
+          <button>New Topic</button>
+          <div className="forum-pagination">
+            <div className="topics-total">50 topics - </div>
+            <div className="">Prev 1 <span className="current-page">2</span> 3 Next</div>
+            </div>
+        </div>
       </div>
     )
 }

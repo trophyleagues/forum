@@ -1,7 +1,7 @@
 import React from 'react';
 import {useDispatch} from 'react-redux';
 import TopicContainer from './TopicContainer';
-import UserCard from '../TopicElements/UserCard'
+import SubforumsCard from '../TopicElements/ForumRightMenu'
 import {fetchForumData} from '../../../store/actions/forumActions';
 import {url} from '../../../config/config';
 
@@ -13,12 +13,12 @@ const ForumMain = () => {
   }, [dispatch])
   
   return (
-    <div className="row">
+    <div className="row forums-container">
       <div className="col-md-9">
         <TopicContainer />
       </div>
       <div className="col-md-3">
-        <UserCard />
+        <SubforumsCard />
       </div>
     </div>
     )

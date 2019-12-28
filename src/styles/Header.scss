@@ -1,0 +1,45 @@
+@import './vars.scss';
+.header {
+    background: $deep-blue;
+    height: 50px;
+    background-size: 100%;
+    border-top: 5px solid $primary-color;
+    z-index: 2;
+    li {
+        white-space: nowrap;
+    }
+    .logo-container {
+        background: $dark-blue;
+        height: 100%;
+        color: $light-gray;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 5px 20px;
+    }
+    .top-menu {
+        max-width: 80%;
+        ul {
+            position: relative;
+            display: flex;
+            margin-top: 15px;
+            text-transform: uppercase;
+        }
+        li {
+            display: inline !important;
+            color: $light-gray;
+            text-align: center;
+            font-size: 1.0rem;
+            padding: 0 20px 5px 20px;
+            a {
+                color: $white;
+                line-height: 1.3rem;
+            }
+        }
+        li.is-selected {
+            border-bottom: solid 3px $primary-color;
+        }
+        li:hover {
+            border-bottom: solid 3px $light-gray;
+        }
+    }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import AllPosts from './AllPosts';
-import UserCard from '../TopicElements/UserCard'
+import ForumRightMenu from '../TopicElements/ForumRightMenu'
 import {fetchSubforumData} from '../../../store/actions/forumActions';
 import {subforum} from '../../../config/endpoints';
 
@@ -20,7 +20,7 @@ const ForumThreads  = (props) => {
           <AllPosts />
         </div>
         <div className="col-md-3">
-          <UserCard />
+          <ForumRightMenu />
         </div>
       </div>
     )

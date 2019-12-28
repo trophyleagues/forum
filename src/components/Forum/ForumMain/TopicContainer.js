@@ -5,7 +5,7 @@ import Announces from '../TopicElements/Announces';
 class TopicContainer extends Component {
   render(){
     return(
-      <div className="topic-container mb-3">
+      <div className="topic-container">
         <Announces></Announces>
         <SubforumsPreview></SubforumsPreview>
       </div>
