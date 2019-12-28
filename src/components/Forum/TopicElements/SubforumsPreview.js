@@ -9,10 +9,10 @@ const SubforumsPreview = () => {
       <div className="announces-container">
         <table>
           <thead>
-            <th style={{width: '55%'}}>Topics</th>
-            <th style={{width: '10%'}}>Replies</th>
-            <th style={{width: '15%'}}>Views</th>
-            <th style={{width: '20%'}}>Last Post</th>
+            <td style={{width: '55%'}}>Topics</td>
+            <td style={{width: '10%'}}>Replies</td>
+            <td style={{width: '15%'}}>Views</td>
+            <td style={{width: '20%'}}>Last Post</td>
           </thead>
           <tbody>
           {subforums && subforums.length >= 1 ? subforums[0].map((forum) => {

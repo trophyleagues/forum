@@ -26,6 +26,7 @@ class Login extends Component {
       email: this.state.email,
       password: this.state.password
     }).then(res => {
+      console.log(res)
       localStorage.setItem('access_token', res.data.access_token)
       localStorage.setItem('user_id', res.data.user_id)
       this.props.history.push('/forum')
