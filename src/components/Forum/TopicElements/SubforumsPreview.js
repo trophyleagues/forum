@@ -1,7 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux'
-import Description from "./Description";
-import SubForumTitle from "./SubForumTitle";
+import unread from '../../../assets/forum/unread.png'
 
 const SubforumsPreview = () => {
     const subforums = useSelector((state) => state.forum.subforums)
@@ -20,7 +19,7 @@ const SubforumsPreview = () => {
             <tr>
               <td className="topic-title">
                 <div className="topic-ico">
-                  IMG
+                  <img src={unread} alt="" />
                 </div>
                 <div className="title">
                   <span className="">{forum.name}</span><br />
@@ -29,7 +28,7 @@ const SubforumsPreview = () => {
               </td>
               <td><span className="text-center">{forum.total_posts}</span></td>
               <td><span className="text-center">835</span></td>
-              <td><span>By <a href="#">{forum.author.name}</a>Today</span></td>
+              <td><span>By <a href="#">{forum.author.name} </a> Today</span></td>
             </tr>
             )})
             : <div>No se encontraron subforos</div>}

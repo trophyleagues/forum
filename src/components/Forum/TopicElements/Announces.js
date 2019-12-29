@@ -1,4 +1,5 @@
 import React from 'react';
+import unread from '../../../assets/forum/unread.png'
 
 const Announces = () => {
     return(
@@ -13,8 +14,8 @@ const Announces = () => {
           <tbody>
             <tr>
               <td className="topic-title">
-                <div className="topic-ico">
-                  IMG
+              <div className="topic-ico">
+                  <img src={unread} alt="" />
                 </div>
                 <div className="title">
                   <span className="">LOREM IPSUM DOLOR SIT AMET CONSECUTURNUCTUS</span><br />

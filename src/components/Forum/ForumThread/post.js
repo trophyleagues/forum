@@ -14,29 +14,8 @@ const Post = () => {
   return (
     <>
       <div className="row clearfix">
-        <div className="col-md-12 column">
-          <div className="row clearfix">
-            <div className="col-md-12 column">
-              <div className="card topic topic-default">
-                <div className="row topic-body">
-                  <div className="col-md-9">
-                    <h2 className="mt-2 text-center">Who want to buy my best player?</h2>
-                    <hr />
-                    <div className="topic-heading">
-                      <div className="topic-title">
-                        <div className="text-center">
-                          <i className="fa fa-calendar"></i> 2014-09-15 , <i className="fa fa-clock-o"></i> 1:35 pm
-                  </div>
-                      </div>
-                    </div>
-                    <div className="topic-content">
-                      Hi, I'm wondering whats the name of the element that appaers in this website: Startupbus
-                      Im talking about the images that remain static in the back and change everytime a new div is reached.
-                      Is there a framework that does this?
-                      Thank you for helping
-              </div>
-                  </div>
-                  <div id="user-description" className="col-md-3 ">
+              <div className="row card topic topic-default">
+                <div id="user-description" className="col-md-3 ">
                     <div className="well">
                       <div className="dropdown">
                         <a href="/" className="dropdown-toggle" data-toggle="dropdown">
@@ -68,12 +47,25 @@ const Post = () => {
                       </div>
                     </div>
                   </div>
+                  <div className="col-md-9">
+                    <h2 className="mt-2 text-center">Who want to buy my best player?</h2>
+                    <hr />
+                    <div className="topic-heading">
+                      <div className="topic-title">
+                        <div className="text-center">
+                          <i className="fa fa-calendar"></i> 2014-09-15 , <i className="fa fa-clock-o"></i> 1:35 pm
+                  </div>
+                      </div>
+                    </div>
+                    <div className="topic-content">
+                      Hi, I'm wondering whats the name of the element that appaers in this website: Startupbus
+                      Im talking about the images that remain static in the back and change everytime a new div is reached.
+                      Is there a framework that does this?
+                      Thank you for helping
+              </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="topic-footer d-flex justify-content-between pt-2">
         <div className="pl-4">
           <i className="fa fa-thumbs-up "></i><a href="/"> Thanks </a>| <i className="fa fa-warning "></i><a href="/"> Report </a>
