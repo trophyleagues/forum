@@ -5,77 +5,75 @@
 ----------------------------------------------------- */
 
 .wrapper {
-  display: flex;
-  align-items: stretch;
+    display: flex;
+    align-items: stretch;
 }
 
 #sidebar {
-  width: 100%;
-  background: $deep-blue;
-  color: #B7D5A6;
-  transition: all 0.3s;
-  text-align: left;
-  height: 94vh;
-  li {
-    color: $light-gray;
-    padding: 10px 5px;
-    font-family: sspro;
-    font-size: 1.2rem;
-    margin-left: 15%;
-    line-height: 0.8rem;
-  }
-  .menu-icon {
-    height: 100%;
-    margin-bottom: 0.3rem;
-  }
+    width: 100%;
+    background: $deep-blue;
+    color: #B7D5A6;
+    transition: all 0.3s;
+    text-align: left;
+    height: 94vh;
+    li {
+        color: $light-grey;
+        padding: 10px 5px;
+        font-family: sspro;
+        font-size: 1.2rem;
+        margin-left: 15%;
+        line-height: 0.8rem;
+    }
+    .menu-icon {
+        height: 100%;
+        margin-bottom: 0.3rem;
+    }
 }
 
 .sidebar-bottom {
-  background: $body-bg;
-  /* width: 14.3%; */
-  min-height: 50px;
-  padding: 0 15px 0 15px;
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  .user-avatar {
-    height: 50px;
-    margin: 5px 10px;
-  }
+    background: $body-bg;
+    /* width: 14.3%; */
+    min-height: 50px;
+    padding: 0 15px 0 15px;
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    .user-avatar {
+        height: 50px;
+        margin: 5px 10px;
+    }
 }
 
 // #sidebar ul li a:hover {
 //     color: #1E2A3A;
 //     background: #fff;
 // }
-
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-  color: #fff;
-  background: #253144;
+    color: #fff;
+    background: #253144;
 }
 
 .menu-icon {
-  background-image: url('../assets/menu/generic.png');
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
+    background-image: url('../assets/menu/generic.png');
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 .menu-icon:hover {
-  background-image: url('../assets/menu/generic_hover.png');
-
+    background-image: url('../assets/menu/generic_hover.png');
 }
 
 .ico-active {
-  background-image: url('../assets/menu/generic_active.png') !important;
+    background-image: url('../assets/menu/generic_active.png') !important;
 }
 
 .menu-text {
-  font-family: Myriad Pro, Dosis;
-  color: #c3d99e;
-  margin: 0px;
-  padding-bottom: 8px;
-  font-family: dosis;
+    font-family: Myriad Pro, Dosis;
+    color: #c3d99e;
+    margin: 0px;
+    padding-bottom: 8px;
+    font-family: dosis;
 }

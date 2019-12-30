@@ -5,7 +5,8 @@ import Post from './post';
 const Thread = () => {
   return (
   <div className="row">
-    <div className="col-md-9">
+    <h2 className="section-title">Forum</h2>
+    <div className="col-md-9 forums-container">
       <Post></Post>
     </div>
     <div className="col-md-3">

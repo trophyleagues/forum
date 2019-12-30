@@ -3,6 +3,10 @@ import { useDispatch } from 'react-redux';
 import logo from '../../../assets/club/shield2.png';
 import { fetchPostData } from '../../../store/actions/forumActions';
 import { url } from '../../../config/config';
+import '../../../styles/Forum.scss'
+import voteup from '../../../assets/forum/voteup.png'
+import votedown from '../../../assets/forum/votedown.png'
+import goup from '../../../assets/forum/goup.png'
 
 const Post = () => {
   const dispatch = useDispatch()
@@ -13,72 +17,62 @@ const Post = () => {
 
   return (
     <>
-      <div className="row clearfix">
-              <div className="row card topic topic-default">
-                <div id="user-description" className="col-md-3 ">
-                    <div className="well">
-                      <div className="dropdown">
-                        <a href="/" className="dropdown-toggle" data-toggle="dropdown">
-                          <i className="fa fa-cricle"></i>Mache<span className="caret"></span></a>
-                        <ul className="dropdown-menu" role="menu">
-                          <li><a href="/"><i className="fa fa-user"></i>See profile</a></li>
-                          <li><a href="/"><i className="fa fa-envelope"></i> Send PM</a></li>
-                          <li><a href="/"><i className="fa fa-code"></i>View all Articles</a></li>
-                          <li><a href="/"><i className="fa fa-th-list"></i>View all Posts</a></li>
-                          <li className="divider"></li>
-                          <li><a href="/"><i className="fa fa-plus"></i>Add to contact List</a></li>
-                          <li className="divider"></li>
-                          <li><a href="/"><i className="fa fa-cogs"></i>Manage User (for adminstrator)</a></li>
-                        </ul>
-                      </div>
-                      <div>
-                        <img className="topic-user-avatar img-responsive" src={logo} alt="Mache Avatar" />
-                        <div className="text-center">Deportivo San Pedro<br /><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star"></i><i className="fa fa-star-half"></i> </div>
-                      </div>
-                      <div className="topic-user-stats">
-                        <b>Joined date:</b><br />
-                        <span>15 September 2014</span><br />
-                        <b>Posts:</b><br />
-                        <span>785</span><br />
-                        <b>Categoría:</b><br />
-                        <span>III Argentina</span><br />
-                        <b>Likes:</b><br />
-                        <span>150 likes</span><br />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-md-9">
-                    <h2 className="mt-2 text-center">Who want to buy my best player?</h2>
-                    <hr />
-                    <div className="topic-heading">
-                      <div className="topic-title">
-                        <div className="text-center">
-                          <i className="fa fa-calendar"></i> 2014-09-15 , <i className="fa fa-clock-o"></i> 1:35 pm
-                  </div>
-                      </div>
-                    </div>
-                    <div className="topic-content">
-                      Hi, I'm wondering whats the name of the element that appaers in this website: Startupbus
-                      Im talking about the images that remain static in the back and change everytime a new div is reached.
-                      Is there a framework that does this?
-                      Thank you for helping
+      <div className="breadcrumb">
+        International > Announcements > &nbsp;<span className="active"> Lorem Ipsum</span>
+      </div>
+      <div className="posts-container">
+          <div className="author-profile">
+                <img className="author-avatar" src={logo} alt="Mache Avatar" />
+                <div className="author-club">Deportivo San Pedro</div>
+                <div className="author-category">
+                  <span className="country-flag">AR</span><span className="category">III.A</span>
+                </div>
+                <div className="author-posts">
+                  <span>12345 Posts</span>
+                </div>
+                <div className="author-badge">
+                  <span>NINJA</span>
+                </div>
+                <div className="post-votes">
+                  <div className="positives">21</div>
+                  <div className="negatives">3</div>
+                </div>
+                <div className="post-date">
+                  Today @ 11:25 AM
+                </div>
+            </div>
+          <div className="post-content">
+              <div className="topic-content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </div>
+              <hr />
+              <div className="author-signature">FIRMA AQUI</div>
+              <div className="post-actions">
+                <div className="anseroredit">
+                  <div className="answer mr-3">Answer </div>
+                  <div className="edit">Edit </div>
+                </div>
+                <div className="votes">
+                  <div className="positive mr-2">
+                    <img src={voteup} alt="vote positive" />
+                  </div>
+                  <div className="negative mr-2">
+                    <img src={votedown} alt="vote negative" />
+                  </div>
+                  <div className="goup">
+                    <img src={goup} alt="goup" />
                   </div>
                 </div>
               </div>
-      <div className="topic-footer d-flex justify-content-between pt-2">
-        <div className="pl-4">
-          <i className="fa fa-thumbs-up "></i><a href="/"> Thanks </a>| <i className="fa fa-warning "></i><a href="/"> Report </a>
-        </div>
-        <div className="pr-4">
-          <span className="fa-stack">
-            <i className="fa fa-quote-right fa-stack-1x"></i>
-            <i className="fa fa-comment-o fa-lg fa-stack-1x"></i>
-          </span>
-          <a href="/"> Reply With Quote </a> |
-          <i className="fa fa-mail-reply "></i><a href="/"> Reply </a> |
-          <i className="fa fa-edit "></i><a href="/"> Edit Post </a>
-        </div>
+            </div>
+            <div className="thread-actions">
+                <button>New Topic</button>
+                <div className="forum-pagination">
+                  <div className="topics-total">0 replies - </div>
+                  <div className=""><span className="current-page">Page 1 </span> </div>
+                </div>
+            </div>
       </div>
     </>
   )

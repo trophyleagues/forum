@@ -26,6 +26,10 @@
         display: flex;
         justify-content: space-between;
     }
+    .subforum:hover {
+        color: $primary-color;
+        cursor: pointer;
+    }
 }
 
 .search-container {

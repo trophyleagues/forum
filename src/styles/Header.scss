@@ -11,7 +11,7 @@
     .logo-container {
         background: $dark-blue;
         height: 100%;
-        color: $light-gray;
+        color: $light-grey;
         text-align: center;
         font-size: 1.5rem;
         padding: 5px 20px;
@@ -26,7 +26,7 @@
         }
         li {
             display: inline !important;
-            color: $light-gray;
+            color: $light-grey;
             text-align: center;
             font-size: 1.0rem;
             padding: 0 20px 5px 20px;
@@ -39,7 +39,7 @@
             border-bottom: solid 3px $primary-color;
         }
         li:hover {
-            border-bottom: solid 3px $light-gray;
+            border-bottom: solid 3px $light-grey;
         }
     }
 }
