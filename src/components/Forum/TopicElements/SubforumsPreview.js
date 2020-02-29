@@ -1,8 +1,9 @@
 import React from 'react';
 import {useSelector} from 'react-redux'
+import {withRouter} from 'react-router-dom';
 import unread from '../../../assets/forum/unread.png'
 
-const SubforumsPreview = () => {
+const SubforumsPreview = (props) => {
     const subforums = useSelector((state) => state.forum.subforums)
     return(
       <div className="announces-container">
@@ -36,7 +37,7 @@ const SubforumsPreview = () => {
         </table>
         : <div className="empty-forum">Todavía no hay posts en este subforo</div>}
         <div className="forum-actions">
-          <button>New Topic</button>
+          <button onClick={() => props.history.push(`/forum/create-post/`)}>New Topic</button>
           <div className="forum-pagination">
             <div className="topics-total">50 topics - </div>
             <div className="">Prev 1 <span className="current-page">2</span> 3 Next</div>
@@ -47,4 +48,4 @@ const SubforumsPreview = () => {
 }
 
 
-export default SubforumsPreview
+export default withRouter(SubforumsPreview)

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Header from './components/GeneralComponents/Header';
 import AuthenticateComponent from './components/AuthenticateComponent';
-import Login from './components/User/Login';
-import Register from './components/User/Register';
+import Login from './components/Users/Login';
+import Register from './components/Users/Register';
 import Dashboard from './views/Dashboard';
 import Subforum from './views/Subforum';
 import Topic from './views/Topic';
@@ -28,7 +28,7 @@ class App extends Component {
           <Route path="/forum" exact component={Dashboard} />
           <Route path="/forum/subforum/:id" component={Subforum} />
           <Route exact path="/forum/topic/:id" component={Topic} />
-          <Route path="/forum/topic/:id/new" component={CreateTopic} />
+          <Route path="/forum/create-post/:subforum?" component={CreateTopic} />
           <AuthenticateComponent>
             {/* Pages loged in */}
           </AuthenticateComponent>
