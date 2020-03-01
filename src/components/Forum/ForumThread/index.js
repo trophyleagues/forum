@@ -7,7 +7,7 @@ const Thread = () => {
   <div className="row">
     <h2 className="section-title">Forum</h2>
     <div className="col-md-9 forums-container">
-      <Post></Post>
+      <Post />
     </div>
     <div className="col-md-3">
       <ForumRightMenu />

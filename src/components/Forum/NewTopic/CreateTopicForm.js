@@ -8,7 +8,6 @@ const CreateTopicForm = (props) => {
   const [content, setContent] = useState("")
 
   const submitMsg = (action, e) => {
-    console.log("Enviando: ", action, title, content)
     var uuid = uuidv4()
     e.preventDefault()
     if(action === "preview") {
@@ -27,13 +26,14 @@ const CreateTopicForm = (props) => {
   }
 
   return (
-    <div className="forums-container">
+    <div className="">
+        <h2 className="section-title">New Topic</h2>
         <form>
           <input className="newtopic-input-title" type="text" placeholder="Title" onChange={(e) => setTitle(e.target.value)}/>
-          <input className="newtopic-input-content" type="textarea" placeholder="Write your message here" onChange={(e) => setContent(e.target.value)} />
+          <textarea className="newtopic-input-content" type="textarea" placeholder="Write your message here" onChange={(e) => setContent(e.target.value)} />
           <div className="d-flex justify-content-end">
-            <button className="btn btn-gradient m-2" onClick={(e) => submitMsg("preview", e)}>Preview</button>
-            <button className="btn btn-gradient m-2" onClick={(e) => submitMsg("create", e)}>Create</button>
+            {/* Preview for the next version */}
+{/*         <button className="btn btn-primary m-2" onClick={(e) => submitMsg("preview", e)}>Preview</button> */}            <button className="btn btn-primary m-2" onClick={(e) => submitMsg("create", e)}>Create</button>
           </div>
         </form>
     </div>
