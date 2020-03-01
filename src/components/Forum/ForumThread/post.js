@@ -67,13 +67,13 @@ const Post = (props) => {
                 </div>
               </div>
             </div>
-            <div className="thread-actions">
-                <button onClick={() => props.history.push('/forum/create-post')}>New Topic</button>
-                <div className="forum-pagination">
-                  <div className="topics-total">0 replies - </div>
-                  <div className=""><span className="current-page">Page 1 </span> </div>
-                </div>
-            </div>
+          <div className="thread-actions">
+              <button onClick={() => props.history.push('/forum/create-post')}>New Topic</button>
+              <div className="forum-pagination">
+                <div className="topics-total">0 replies - </div>
+                <div className=""><span className="current-page">Page 1 </span> </div>
+              </div>
+          </div>
       </div>
     </>
   )

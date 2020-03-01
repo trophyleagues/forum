@@ -48,7 +48,7 @@ const Register = () => {
         <input type="password" name="password" placeholder="Password" className="form-control"
           value={password} onChange={(e) => setPassword(e.target.value)} />
       </div>
-        <button type="submit" className="btn btn-gradient d-flex">Registrarse</button>
+        <button type="submit">Registrarse</button>
       </form>
       </div>
     </div>

@@ -53,6 +53,10 @@
         font-size: 0.7rem;
     }
 }
+.search-container:focus {
+    outline: none;
+    border: none;
+}
 
 // OLD -> DELETE FROM HERE LATEr
 .myoverlay {

@@ -35,7 +35,7 @@ class Login extends Component {
 
   render(){
     return (
-    <div>
+    <>
     <div className="col-md-12 d-flex justify-content-center p-5">
       <div className="col-md-12 login-box">
         <div className="card p-5">
@@ -50,7 +50,7 @@ class Login extends Component {
               <input type="password" name="password" onChange={e => this.change(e)} value={this.state.password} className="form-control" />
             </div>
             <div className="d-flex flex-row-reverse">
-            <button type="submit" className="btn btn-gradient d-flex">Enviar</button>
+            <button type="submit">Enviar</button>
             </div>
             <div className="text-center">
               <small><Link to="/register"><span className="text-main">Registrate</span> si aún no tienes una cuenta</Link></small>
@@ -60,7 +60,7 @@ class Login extends Component {
         </div>
       </div>
     </div>
-    </div>
+    </>
     )
   }
 }

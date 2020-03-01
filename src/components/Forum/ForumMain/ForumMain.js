@@ -13,7 +13,7 @@ const ForumMain = () => {
   }, [dispatch])
   
   return (
-    <div className="row forums-container">
+    <div className="forums-container">
       <div className="col-md-9">
         <TopicContainer />
       </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector} from 'react-redux'
-import {withRouter} from 'react-router-dom';
+import {Link, withRouter} from 'react-router-dom';
 import unread from '../../../assets/forum/unread.png'
 
 const SubforumsPreview = (props) => {
@@ -11,9 +11,9 @@ const SubforumsPreview = (props) => {
         <table className="table-striped">
           <thead>
             <td className="title-td">Topics</td>
-            <td>Replies</td>
-            <td>Views</td>
-            <td>Last Post</td>
+            <td className="topic-posts">Replies</td>
+            <td className="topic-views">Views</td>
+            <td  className="topic-lastResponse">Last Post</td>
           </thead>
           <tbody>
           {subforums[0].map((forum) => {
@@ -25,12 +25,12 @@ const SubforumsPreview = (props) => {
                 </div>
                 <div className="title">
                   <span className="">{forum.name}</span><br />
-                  <span className="author">By <a href="#">{forum.author.name}</a> </span> <span className="date"> {forum.created_at}</span>
+                  <span className="author">By <Link to={`/forum/profile/usuario`}>{forum.author.name}</Link> </span> <span className="date"> {forum.created_at}</span>
                 </div>
               </td>
-              <td><span className="text-center">{forum.total_posts}</span></td>
-              <td><span className="text-center">835</span></td>
-              <td><span>By <a href="#">{forum.author.name} </a> Today</span></td>
+              <td className="topic-posts"><span className="text-center">{forum.total_posts}</span></td>
+              <td className="views"><span className="text-center">835</span></td>
+              <td className="topic-lastResponse"><span>By <Link to={`/forum/profile/usuario`}>{forum.author.name} </Link> Today</span></td>
             </tr>
             )})}
           </tbody>
