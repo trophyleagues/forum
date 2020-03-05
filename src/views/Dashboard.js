@@ -5,10 +5,8 @@ import '../styles/Forum.scss';
 const Dashboard = () => {
     return(
     <>
-      <div className="container">
         <h2 className="section-title">Forum</h2>
         <ForumMain></ForumMain>
-      </div>
     </>
     )
 }

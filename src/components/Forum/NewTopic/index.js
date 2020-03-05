@@ -4,15 +4,12 @@ import CreateTopicForm from './CreateTopicForm';
 import ForumRight from '../TopicElements/ForumRight'
 import {fetchSubforumData} from '../../../store/actions/forumActions';
 import {url} from '../../../config/config';
+
 const ForumThreads  = () => {
   const dispatch = useDispatch()
 
-  React.useEffect(() => {
-    dispatch(fetchSubforumData(url, 1))
-  }, [dispatch])
-
     return(
-      <div className="container row">
+      <div className="forums-container">
         <div className="topic-container col-md-9">
           <CreateTopicForm />
         </div>

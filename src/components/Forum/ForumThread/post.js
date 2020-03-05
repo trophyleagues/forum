@@ -1,5 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import {withRouter} from 'react-router-dom';
 import logo from '../../../assets/club/shield2.png';
 import { fetchPostData } from '../../../store/actions/forumActions';
 import { url } from '../../../config/config';
@@ -8,7 +9,7 @@ import voteup from '../../../assets/forum/voteup.png'
 import votedown from '../../../assets/forum/votedown.png'
 import goup from '../../../assets/forum/goup.png'
 
-const Post = () => {
+const Post = (props) => {
   const dispatch = useDispatch()
 
   React.useEffect(() => {
@@ -66,16 +67,16 @@ const Post = () => {
                 </div>
               </div>
             </div>
-            <div className="thread-actions">
-                <button>New Topic</button>
-                <div className="forum-pagination">
-                  <div className="topics-total">0 replies - </div>
-                  <div className=""><span className="current-page">Page 1 </span> </div>
-                </div>
-            </div>
+          <div className="thread-actions">
+              <button onClick={() => props.history.push('/forum/create-post')}>New Topic</button>
+              <div className="forum-pagination">
+                <div className="topics-total">0 replies - </div>
+                <div className=""><span className="current-page">Page 1 </span> </div>
+              </div>
+          </div>
       </div>
     </>
   )
 }
 
-export default Post;
+export default withRouter(Post);

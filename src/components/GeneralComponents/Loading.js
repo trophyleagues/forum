@@ -20,7 +20,7 @@ const Loading = () => {
     <ClipLoader 
       css={override}
       sizeUnit={"px"}
-      size={150}
+      size={50}
       color={'#65b8f8'}
       loading={true} />
   </div>
